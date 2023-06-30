@@ -1,0 +1,44 @@
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+import { createGlobalStyle } from 'styled-components';
+import WideScreenHero from './Slides/WideScreen/HeroSlide/Hero';
+import WideScreenWork from './Slides/WideScreen/WorkSlide/Work';
+import WideScreenContact from './Slides/WideScreen/ContactSlide/Contact';
+
+const GlobalStyle = createGlobalStyle`
+html, body { margin: 0; }
+*, *:before, *:after { box-sizing: border-box; }
+`;
+
+class App extends Component {
+  scrollInterval = null;
+
+  componentDidMount() {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+
+    this.scrollInterval = setInterval(() => {
+      window.scrollBy(0, 1);
+    }, 10);
+  }
+
+  componentWillUnmount() {
+    if (this.scrollInterval) {
+      clearInterval(this.scrollInterval);
+    }
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+          <WideScreenHero />
+          <WideScreenWork />
+          <WideScreenContact />
+        <GlobalStyle />
+      </React.Fragment>
+    );
+  }
+}
+
+render(React.createElement(App), document.getElementById('root'));

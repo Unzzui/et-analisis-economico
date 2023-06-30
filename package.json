@@ -1,0 +1,47 @@
+{
+  "name": "et_analisis_economico",
+  "version": "1.0.0",
+  "description": "Diego Bravo's ET Analisis",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "deploy": "git subtree push --prefix docs origin gh-pages",
+    "start": "parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unzzui/et_analisis_economico.git"
+  },
+  "author": "Diego Bravo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unzzui/et_analisis_economico/issues"
+  },
+  "homepage": "https://github.com/unzzui/et_analisis_economico#readme",
+  "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1"
+  },
+  "dependencies": {
+    "d3": "^7.8.5",
+    "dotenv": "^6.1.0",
+    "prop-types": "^15.8.1",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.0",
+    "react-responsive": "^6.0.1",
+    "src": "^1.1.2",
+    "styled-components": "^4.0.3",
+    "ua-parser-js": "^0.7.19",
+    "vh-check": "^2.0.5",
+    "parcel-bundler": "^1.12.5"
+
+  }
+}
