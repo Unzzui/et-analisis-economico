@@ -67,7 +67,7 @@ const DolarChart = () => {
     svg
       .append('text')
       .attr('x', width / 2)
-      .attr('y', height + margin.bottom - 30)
+      .attr('y', height + margin.bottom - 75)
       .attr('text-anchor', 'middle')
       .text('Año')
       .style('font-size', '14px')

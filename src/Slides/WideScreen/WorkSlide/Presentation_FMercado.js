@@ -124,7 +124,9 @@ const FMercado = () => {
     <Container className={fadeIn ? 'fade-in' : ''}>
       <Title>Funcionamiento del mercado</Title>
       <Paragraph>
-      En los gráficos que se presentarán a continuación, se mostrarán de manera precisa y detallada los indicadores macroeconómicos. Estos gráficos proporcionarán una comprensión profunda de la evolución de la actividad económica, el empleo, la política monetaria, la inflación, la balanza comercial de minerales y el tipo de cambio del dólar observado. A través de esta representación visual, se podrá apreciar de forma integral cómo estos indicadores evolucionan durante el tiempo.</Paragraph>
+      En esta sección, exploraremos el funcionamiento del mercado de la industria minera y examinaremos los cambios en la oferta y la demanda. Acompañaremos nuestra investigación con un gráfico hipotético que ilustrara escenarios de aumento de la demanda, disminución de la oferta, disminución de la demanda y aumento de la oferta. Además, proporcionaremos enlaces a noticias reales que ejemplifican estos casos y muestran cómo situaciones reales han afectado al mercado minero. Estos ejemplos concretos brindarán una visión más completa de los impactos y las implicaciones de los cambios en la oferta y la demanda en este sector estratégico.
+      
+        </Paragraph>
 
     </Container>
   );

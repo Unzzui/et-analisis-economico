@@ -3,6 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import PropTypes from 'prop-types';
 import device from '../../../Assets/Responsive/breakpoints';
 
+
 const Stage = styled.div`
 position: relative;
 /* border:1px solid black; */
@@ -34,6 +35,11 @@ const TextToReveal = styled.div`
   text-align:center;
   animation: ${props => (props.reveal ? moveUp(props.fontSizeInPx) : 'none')} 1s cubic-bezier(0, 0.1, .12, .99) forwards;
   transform: translateY(${props => (props.fontSizeInPx * 1.4)}px);
+  @media ${device.mobileM} {
+    font-size: 24px;
+    animation: ${props => (props.reveal ? moveUp(28) : 'none')} 1s cubic-bezier(0, 0.1, .12, .99) forwards;
+    transform: translateY(${28 * 1.4}px);
+  }
   @media ${device.tablet} {
     font-size: 28px;
     animation: ${props => (props.reveal ? moveUp(28) : 'none')} 1s cubic-bezier(0, 0.1, .12, .99) forwards;
@@ -93,10 +99,12 @@ class TitleReveal extends Component {
     const { reveal } = this.state;
     return (
       <Stage>
+
         <TextToReveal
           fontFam={fontFam}
           reveal={reveal}
         >
+
           {text}
         </TextToReveal>
         <WhiteBlock />

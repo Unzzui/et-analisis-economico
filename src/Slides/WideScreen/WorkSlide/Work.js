@@ -13,13 +13,15 @@ import SilverChart from './SilverChart';
 import DMacro from './Presentation_Dmacro';
 import DolarChart from './DolarChart';
 import FMercado from './Presentation_FMercado';
-import Presentation from '../HeroSlide/Presentation'
-import Presentation2 from '../HeroSlide/Presentation2'
+import Presentation from '../HeroSlide/Presentation';
+import Presentation2 from '../HeroSlide/Presentation2';
+import SupplyDemandChart from  './DemandSupplyChart'
+import News from './News';
 
 const Container = styled.div`
     display: flex;
     /* border: 1px dashed red; */
-    height:3585vh;
+    height:3685vh;
     
 `;
 
@@ -251,10 +253,88 @@ class Work extends Component {
         projectDesc: '',
         projectType: '',
         roles: [''],
-        projectGraph: '',
+        projectGraph:'',
         projectButton: <FMercado />,
 
+
       },
+
+      {
+        number: '01',
+        projectName: 'Aumento en la demanda del bien transado',
+        projectDesc: 'Ocurre cuando la demanda global de un bien, como el cobre, se incrementa debido al desarrollo de nuevas tecnologías que lo requieren. Esto provoca un desplazamiento hacia la derecha de la curva de demanda, lo que resulta en un aumento del precio y la cantidad de cobre que Chile puede vender en el mercado internacional. Además, este aumento en la demanda puede impulsar inversiones y generar empleo en la industria minera chilena.',
+        projectType: '',
+        roles: [''],
+        projectGraph: '',
+        projectButton: '',
+
+
+      },
+      {
+        number: '02',
+        projectName: 'Disminución de la oferta del bien transado en el mercado.',
+        projectDesc: 'Una disminución en la oferta del bien transado en el mercado puede ocurrir debido a problemas laborales, restricciones ambientales, baja calidad del mineral o dificultades técnicas en la extracción. Esto provoca un desplazamiento hacia la izquierda de la curva de oferta de cobre, lo que resulta en un aumento del precio y una reducción en la cantidad de cobre que Chile puede ofrecer en el mercado internacional.',
+        projectType: '',
+        roles: [''],
+        projectGraph: '',
+        projectButton: '',
+
+
+      },
+      {
+        number: '03',
+        projectName: 'Disminución de la demanda del bien transado en el mercado.',
+        projectDesc: 'Una disminución en la oferta del bien transado en el mercado puede ocurrir debido a problemas laborales, restricciones ambientales, baja calidad del mineral o dificultades técnicas en la extracción. Esto provoca un desplazamiento hacia la izquierda de la curva de oferta de cobre, lo que resulta en un aumento del precio y una reducción en la cantidad de cobre que Chile puede ofrecer en el mercado internacional.',
+        projectType: '',
+        roles: [''],
+        projectGraph: '',
+        projectButton: '',
+
+
+      },
+      {
+        number: '04',
+        projectName: 'Aumento de la oferta del bien transado en el mercado.',
+        projectDesc: 'Si se descubren nuevas minas de cobre en Chile o se logra aumentar la productividad de las minas existentes mediante mejoras tecnológicas, la oferta de cobre del país podría aumentar. Esto provocaría un desplazamiento hacia la derecha de la curva de oferta, lo que resultaría en una reducción del precio del cobre y un aumento en la cantidad de cobre que Chile puede vender en el mercado internacional. Esta situación podría beneficiar a la economía chilena al incrementar las exportaciones totales, aunque los ingresos por unidad de cobre podrían disminuir debido a la disminución de los precios.',
+        projectType: '',
+        roles: [''],
+        projectGraph: '',
+        projectButton: '',
+
+
+      },
+
+      {
+        number: '',
+        projectName: '',
+        projectDesc: '',
+        projectType: '',
+        roles: [''],
+        projectGraph: <SupplyDemandChart/>,
+        projectButton:  '',
+
+      },
+      {
+        number: '',
+        projectName: '',
+        projectDesc: '',
+        projectType: '',
+        roles: [''],
+        projectGraph: '',
+        projectButton:  <News/>,
+
+      },
+      {
+        number: '',
+        projectName: '',
+        projectDesc: '',
+        projectType: '',
+        roles: [''],
+        projectGraph: '',
+        projectButton:  '',
+
+      },
+     
       
     ];
   }

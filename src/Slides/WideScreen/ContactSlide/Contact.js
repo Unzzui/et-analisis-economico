@@ -22,11 +22,20 @@ const ContactTitle = styled.div`
   transition: transform 0.5s ease-out;
   font-family: 'AvenirHeavy';
   font-size: 200px;
-  color: #EEE;
+  color: #D07131;
   top:12%;
   left:-70%;
+  @media ${device.mobileS} {
+    font-size: 50px;
+  }
+  @media ${device.mobileM} {
+    font-size: 70px;
+  }
+  @media ${device.tablet} {
+    font-size: 90px;
+  }
   @media ${device.laptop} {
-    font-size: 180px;
+    font-size: 140px;
   }
   @media ${device.laptopL} {
     font-size: 200px;
@@ -82,11 +91,11 @@ class Contact extends Component {
     const { scrollPercent } = this.state;
     return (
       <Container>
-        <ContactTitle scrollPercent={scrollPercent}>CONTACT</ContactTitle>
+        <ContactTitle scrollPercent={scrollPercent}>CONTACTO</ContactTitle>
         <SocialMediaIcons>
           <SocialLogo imgURL={githubImg} alternate="Github" redirectURL="https://github.com/unzzui" />
-          <SocialLogo imgURL={mailImg} alternate="Mail" redirectURL="mailto:d.bravob@duocuc.cl" />
-          <SocialLogo imgURL={linkedInImg} alternate="Linkedin" redirectURL="https://www.linkedin.com/in/d-bravob/" />
+          <SocialLogo imgURL={mailImg} alternate="Mail" redirectURL="mailto:d.bravob@duocuc.cl,lean.navarrete@duocuc.cl,ru.godoy@duocuc.cl?subject=Consulta%20Examen%20Transversal%20Análisis%20Económico" />
+          <SocialLogo imgURL={linkedInImg} alternate="Linkedin" redirectURL="https://www.linkedin.com/in/d-bravob/"  />
         </SocialMediaIcons>
       </Container>
     );

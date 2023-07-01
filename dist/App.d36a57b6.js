@@ -29328,6 +29328,8 @@ var device = {
 };
 var _default = device;
 exports.default = _default;
+},{}],"Assets/Images/logo.png":[function(require,module,exports) {
+module.exports = "/logo.f392d54d.png";
 },{}],"Slides/WideScreen/HeroSlide/NameReveal.js":[function(require,module,exports) {
 "use strict";
 
@@ -29339,7 +29341,8 @@ var _react = _interopRequireWildcard(require("react"));
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
 var _propTypes = _interopRequireDefault(require("prop-types"));
 var _breakpoints = _interopRequireDefault(require("../../../Assets/Responsive/breakpoints"));
-var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5;
+var _logo = _interopRequireDefault(require("../../../Assets/Images/logo.png"));
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -29364,7 +29367,7 @@ var moveUp = function moveUp(init) {
 var hideWhiteBlocks = function hideWhiteBlocks() {
   return (0, _styledComponents.keyframes)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n0%{\n    opacity: 1;\n    height: 35vh;\n}\n100%{\n    opacity: 0;\n    height: 0vh;\n}\n"])));
 };
-var TextToReveal = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  font-family: ", ";\n  text-align:center;\n  @media ", " {\n    font-size: 60px;\n    animation: ", " 1s cubic-bezier(0, 0.1, .12, .99) forwards;\n    transform: translateY(", "px);\n  }\n  @media ", " {\n    font-size: 100px;\n    animation: ", " 1s cubic-bezier(0, 0.1, .12, .99) forwards;\n    transform: translateY(", "px);\n  }\n  @media ", " {\n    font-size: 140px;\n    animation: ", " 1s cubic-bezier(0, 0.1, .12, .99) forwards;\n    transform: translateY(", "px);\n  }\n  @media ", " {\n    font-size: 150px;\n    animation: ", " 1s cubic-bezier(0, 0.1, .12, .99) forwards;\n    transform: translateY(", "px);\n  }\n  @media ", " {\n    font-size: 200px;\n    animation: ", " 1s cubic-bezier(0, 0.1, .12, .99) forwards;\n    transform: translateY(", "px);\n  }\n"])), function (props) {
+var TextToReveal = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  font-family: ", ";\n  text-align:center;\n  @media ", " {\n    font-size: 80px;\n    animation: ", " 1s cubic-bezier(0, 0.1, .12, .99) forwards;\n    transform: translateY(", "px);\n  }\n  @media ", " {\n    font-size: 100px;\n    animation: ", " 1s cubic-bezier(0, 0.1, .12, .99) forwards;\n    transform: translateY(", "px);\n  }\n  @media ", " {\n    font-size: 140px;\n    animation: ", " 1s cubic-bezier(0, 0.1, .12, .99) forwards;\n    transform: translateY(", "px);\n  }\n  @media ", " {\n    font-size: 150px;\n    animation: ", " 1s cubic-bezier(0, 0.1, .12, .99) forwards;\n    transform: translateY(", "px);\n  }\n  @media ", " {\n    font-size: 200px;\n    animation: ", " 1s cubic-bezier(0, 0.1, .12, .99) forwards;\n    transform: translateY(", "px);\n  }\n"])), function (props) {
   return props.fontFam;
 }, _breakpoints.default.mobileM, function (props) {
   return props.reveal ? moveUp(100) : 'none';
@@ -29378,6 +29381,7 @@ var TextToReveal = _styledComponents.default.div(_templateObject4 || (_templateO
   return props.reveal ? moveUp(200) : 'none';
 }, 200 * 1.4);
 var WhiteBlock = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\nposition: absolute;\nbackground-color: white;\nmargin-right:100%;\nwidth: 120%;\nheight: 35vh;\nanimation: ", " 0.5s linear forwards;\nanimation-delay: 2s;\n/* border: 1px solid grey; */\n"])), hideWhiteBlocks);
+var Logo = _styledComponents.default.img(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  width: 400px;\n  height: 100px;\n  margin-bottom: 20px;\n"])));
 var NameReveal = /*#__PURE__*/function (_Component) {
   _inherits(NameReveal, _Component);
   var _super = _createSuper(NameReveal);
@@ -29412,7 +29416,8 @@ var NameReveal = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this$props = this.props,
         text = _this$props.text,
-        fontFam = _this$props.fontFam;
+        fontFam = _this$props.fontFam,
+        src = _this$props.src;
       var reveal = this.state.reveal;
       return /*#__PURE__*/_react.default.createElement(Stage, null, /*#__PURE__*/_react.default.createElement(TextToReveal, {
         fontFam: fontFam,
@@ -29432,7 +29437,7 @@ NameReveal.defaultProps = {
 };
 var _default = NameReveal;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","prop-types":"../node_modules/prop-types/index.js","../../../Assets/Responsive/breakpoints":"Assets/Responsive/breakpoints.js"}],"Slides/WideScreen/HeroSlide/TitleReveal.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","prop-types":"../node_modules/prop-types/index.js","../../../Assets/Responsive/breakpoints":"Assets/Responsive/breakpoints.js","../../../Assets/Images/logo.png":"Assets/Images/logo.png"}],"Slides/WideScreen/HeroSlide/TitleReveal.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29468,13 +29473,15 @@ var moveUp = function moveUp(init) {
 var hideWhiteBlocks = function hideWhiteBlocks() {
   return (0, _styledComponents.keyframes)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n0%{\n    opacity: 1;\n    height: 35vh;\n}\n100%{\n    opacity: 0;\n    height: 0vh;\n}\n"])));
 };
-var TextToReveal = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  font-family: ", ";\n  text-align:center;\n  animation: ", " 1s cubic-bezier(0, 0.1, .12, .99) forwards;\n  transform: translateY(", "px);\n  @media ", " {\n    font-size: 28px;\n    animation: ", " 1s cubic-bezier(0, 0.1, .12, .99) forwards;\n    transform: translateY(", "px);\n  }\n  @media ", " {\n    font-size: 40px;\n    animation: ", " 1s cubic-bezier(0, 0.1, .12, .99) forwards;\n    transform: translateY(", "px);\n  }\n  @media ", " {\n    font-size: 50px;\n    animation: ", " 1s cubic-bezier(0, 0.1, .12, .99) forwards;\n    transform: translateY(", "px);\n  }\n  @media ", " {\n    font-size: 60px;\n    animation: ", " 1s cubic-bezier(0, 0.1, .12, .99) forwards;\n    transform: translateY(", "px);\n  }\n"])), function (props) {
+var TextToReveal = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  font-family: ", ";\n  text-align:center;\n  animation: ", " 1s cubic-bezier(0, 0.1, .12, .99) forwards;\n  transform: translateY(", "px);\n  @media ", " {\n    font-size: 24px;\n    animation: ", " 1s cubic-bezier(0, 0.1, .12, .99) forwards;\n    transform: translateY(", "px);\n  }\n  @media ", " {\n    font-size: 28px;\n    animation: ", " 1s cubic-bezier(0, 0.1, .12, .99) forwards;\n    transform: translateY(", "px);\n  }\n  @media ", " {\n    font-size: 40px;\n    animation: ", " 1s cubic-bezier(0, 0.1, .12, .99) forwards;\n    transform: translateY(", "px);\n  }\n  @media ", " {\n    font-size: 50px;\n    animation: ", " 1s cubic-bezier(0, 0.1, .12, .99) forwards;\n    transform: translateY(", "px);\n  }\n  @media ", " {\n    font-size: 60px;\n    animation: ", " 1s cubic-bezier(0, 0.1, .12, .99) forwards;\n    transform: translateY(", "px);\n  }\n"])), function (props) {
   return props.fontFam;
 }, function (props) {
   return props.reveal ? moveUp(props.fontSizeInPx) : 'none';
 }, function (props) {
   return props.fontSizeInPx * 1.4;
-}, _breakpoints.default.tablet, function (props) {
+}, _breakpoints.default.mobileM, function (props) {
+  return props.reveal ? moveUp(28) : 'none';
+}, 28 * 1.4, _breakpoints.default.tablet, function (props) {
   return props.reveal ? moveUp(28) : 'none';
 }, 28 * 1.4, _breakpoints.default.laptop, function (props) {
   return props.reveal ? moveUp(40) : 'none';
@@ -29546,10 +29553,12 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _react = _interopRequireWildcard(require("react"));
-var _styledComponents = _interopRequireDefault(require("styled-components"));
+var _styledComponents = _interopRequireWildcard(require("styled-components"));
 var _NameReveal = _interopRequireDefault(require("./NameReveal"));
 var _TitleReveal = _interopRequireDefault(require("./TitleReveal"));
-var _templateObject;
+var _logo = _interopRequireDefault(require("../../../Assets/Images/logo.png"));
+var _breakpoints = _interopRequireDefault(require("../../../Assets/Responsive/breakpoints"));
+var _templateObject, _templateObject2, _templateObject3;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -29567,7 +29576,9 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-var Container = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    display: flex;\n    flex-flow: column nowrap;\n    justify-content: center;\n    align-items: center;\n    height:100vh;\n    width:100%;\n    background-color: white;\n    /* border: 1px solid blue; */\n"])));
+var fadeInAnimation = (0, _styledComponents.keyframes)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n"])));
+var Container = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  display: flex;\n  flex-flow: column nowrap;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  width: 100%;\n  background-color: white;\n"])));
+var Logo = _styledComponents.default.img(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  width: 400px;\n  height: 100px;\n  margin-bottom: 20px;\n  animation: ", " 1.5s ease-in-out;\n\n  &.fade-in {\n    opacity: 1;\n  }\n  @media ", "{\n    width: 250px;\n    height: 70px;\n  }\n  @media ", "{\n    width: 250px;\n    height: 70px;\n  }\n\n  @media ", "{\n    width: 400px;\n    height: 100px;\n  }\n  @media ", "{\n    width: 400px;\n    height: 100px;\n  }\n  @media ", "{\n    width: 400px;\n    height: 100px;\n  }\n"])), fadeInAnimation, _breakpoints.default.mobileS, _breakpoints.default.mobileM, _breakpoints.default.laptopL, _breakpoints.default.laptop, _breakpoints.default.desktop);
 var NameAndJobTitle = /*#__PURE__*/function (_Component) {
   _inherits(NameAndJobTitle, _Component);
   var _super = _createSuper(NameAndJobTitle);
@@ -29578,7 +29589,10 @@ var NameAndJobTitle = /*#__PURE__*/function (_Component) {
   _createClass(NameAndJobTitle, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react.default.createElement(Container, null, /*#__PURE__*/_react.default.createElement(_NameReveal.default, {
+      return /*#__PURE__*/_react.default.createElement(Container, null, /*#__PURE__*/_react.default.createElement(Logo, {
+        src: _logo.default,
+        alt: "Logo"
+      }), /*#__PURE__*/_react.default.createElement(_NameReveal.default, {
         text: "Industria Minera",
         fontFam: "AvenirRoman",
         timeDelay: 500
@@ -29601,7 +29615,7 @@ var NameAndJobTitle = /*#__PURE__*/function (_Component) {
 }(_react.Component);
 var _default = NameAndJobTitle;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","./NameReveal":"Slides/WideScreen/HeroSlide/NameReveal.js","./TitleReveal":"Slides/WideScreen/HeroSlide/TitleReveal.js"}],"Slides/WideScreen/HeroSlide/Hero.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","./NameReveal":"Slides/WideScreen/HeroSlide/NameReveal.js","./TitleReveal":"Slides/WideScreen/HeroSlide/TitleReveal.js","../../../Assets/Images/logo.png":"Assets/Images/logo.png","../../../Assets/Responsive/breakpoints":"Assets/Responsive/breakpoints.js"}],"Slides/WideScreen/HeroSlide/Hero.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -62449,7 +62463,7 @@ var DolarChart = function DolarChart() {
       svg.append('g').attr('transform', "translate(0,".concat(height, ")")).call(d3.axisBottom(x).tickFormat(d3.format('d')));
 
       // Etiqueta del eje x
-      svg.append('text').attr('x', width / 2).attr('y', height + margin.bottom - 30).attr('text-anchor', 'middle').text('Año').style('font-size', '14px').style('font-weight', 'bold');
+      svg.append('text').attr('x', width / 2).attr('y', height + margin.bottom - 75).attr('text-anchor', 'middle').text('Año').style('font-size', '14px').style('font-weight', 'bold');
 
       // Crear el eje y
       svg.append('g').call(d3.axisLeft(y));
@@ -62567,7 +62581,7 @@ var FMercado = function FMercado() {
   }, []);
   return /*#__PURE__*/_react.default.createElement(Container, {
     className: fadeIn ? 'fade-in' : ''
-  }, /*#__PURE__*/_react.default.createElement(Title, null, "Funcionamiento del mercado"), /*#__PURE__*/_react.default.createElement(Paragraph, null, "En los gr\xE1ficos que se presentar\xE1n a continuaci\xF3n, se mostrar\xE1n de manera precisa y detallada los indicadores macroecon\xF3micos. Estos gr\xE1ficos proporcionar\xE1n una comprensi\xF3n profunda de la evoluci\xF3n de la actividad econ\xF3mica, el empleo, la pol\xEDtica monetaria, la inflaci\xF3n, la balanza comercial de minerales y el tipo de cambio del d\xF3lar observado. A trav\xE9s de esta representaci\xF3n visual, se podr\xE1 apreciar de forma integral c\xF3mo estos indicadores evolucionan durante el tiempo."));
+  }, /*#__PURE__*/_react.default.createElement(Title, null, "Funcionamiento del mercado"), /*#__PURE__*/_react.default.createElement(Paragraph, null, "En esta secci\xF3n, exploraremos el funcionamiento del mercado de la industria minera y examinaremos los cambios en la oferta y la demanda. Acompa\xF1aremos nuestra investigaci\xF3n con un gr\xE1fico hipot\xE9tico que ilustrara escenarios de aumento de la demanda, disminuci\xF3n de la oferta, disminuci\xF3n de la demanda y aumento de la oferta. Adem\xE1s, proporcionaremos enlaces a noticias reales que ejemplifican estos casos y muestran c\xF3mo situaciones reales han afectado al mercado minero. Estos ejemplos concretos brindar\xE1n una visi\xF3n m\xE1s completa de los impactos y las implicaciones de los cambios en la oferta y la demanda en este sector estrat\xE9gico."));
 };
 var _default = FMercado;
 exports.default = _default;
@@ -62673,6 +62687,327 @@ var Presentation2 = function Presentation2() {
 };
 var _default = Presentation2;
 exports.default = _default;
+},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","../../../Assets/Responsive/breakpoints":"Assets/Responsive/breakpoints.js"}],"Slides/WideScreen/WorkSlide/DemandSupplyChart.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireWildcard(require("react"));
+var d3 = _interopRequireWildcard(require("d3"));
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+var SupplyDemandChart = function SupplyDemandChart() {
+  var chartRef = (0, _react.useRef)(null);
+  (0, _react.useEffect)(function () {
+    // Datos de ejemplo
+    var data = [{
+      price: 0,
+      demand: 10000,
+      supply: 1000
+    }, {
+      price: 5,
+      demand: 9000,
+      supply: 2500
+    }, {
+      price: 10,
+      demand: 8000,
+      supply: 4000
+    }, {
+      price: 18,
+      demand: 6400,
+      supply: 6400
+    }, {
+      price: 25,
+      demand: 5000,
+      supply: 8500
+    }, {
+      price: 30,
+      demand: 4000,
+      supply: 10000
+    }, {
+      price: 35,
+      demand: 3000,
+      supply: 11500
+    }, {
+      price: 40,
+      demand: 2000,
+      supply: 13000
+    }, {
+      price: 45,
+      demand: 1000,
+      supply: 14500
+    }, {
+      price: 50,
+      demand: 0,
+      supply: 16000
+    }];
+
+    // Configuración del gráfico
+    var createChart = function createChart() {
+      var margin = {
+        top: 20,
+        right: 80,
+        bottom: 130,
+        left: 100
+      };
+      var width = window.innerWidth - margin.left - margin.right;
+      var height = 600 - margin.top - margin.bottom;
+      var formatNumber = d3.format(',.0f');
+
+      // Escala x
+      var x = d3.scaleLinear().domain([0, d3.max(data, function (d) {
+        return Math.max(d.demand, d.supply);
+      })]).range([0, width]);
+
+      // Escala y
+      var y = d3.scaleLinear().domain([0, d3.max(data, function (d) {
+        return d.price;
+      }) + 4]).range([height, 0]);
+
+      // Función para generar la línea de demanda
+      var demandLine = d3.line().x(function (d) {
+        return x(d.demand);
+      }).y(function (d) {
+        return y(d.price);
+      });
+
+      // Función para generar la línea de oferta
+      var supplyLine = d3.line().x(function (d) {
+        return x(d.supply);
+      }).y(function (d) {
+        return y(d.price);
+      });
+
+      // Crear el elemento SVG
+      var svg = d3.select(chartRef.current).append('svg').attr('width', width + margin.left + margin.right).attr('height', height + margin.top + margin.bottom).append('g').style('font-family', 'AvenirRoman').attr('transform', "translate(".concat(margin.left, ",").concat(margin.top, ")"));
+
+      // Crear el eje x
+      svg.append('g').attr('transform', "translate(0,".concat(height, ")")).call(d3.axisBottom(x).tickFormat(d3.format('d')));
+
+      // Etiqueta del eje x
+      svg.append('text').attr('x', width / 2).attr('y', height + margin.bottom - 75).attr('text-anchor', 'middle').text('Cantidad').style('font-size', '14px').style('font-weight', 'bold');
+
+      // Crear el eje y
+      svg.append('g').call(d3.axisLeft(y));
+
+      // Crear líneas horizontales
+      svg.append('g').selectAll('line').data(d3.range(2, d3.max(data, function (d) {
+        return d.price;
+      }) + 2, 2)).enter().append('line').attr('class', 'horizontal-line').attr('x1', 0).attr('y1', function (d) {
+        return y(d);
+      }).attr('x2', width).attr('y2', function (d) {
+        return y(d);
+      }).attr('stroke', '#ccc').attr('stroke-width', 1).attr('stroke-dasharray', '3,3');
+
+      // Etiqueta del eje y
+      svg.append('text').attr('transform', 'rotate(-90)').attr('x', -height / 2).attr('y', -margin.left + 40).attr('text-anchor', 'middle').text('Precio').style('font-size', '14px').style('font-weight', 'bold');
+
+      // Dibujar la línea de demanda
+      svg.append('path').datum(data).attr('fill', 'none').attr('stroke', '#CB6D51').attr('stroke-width', 2).attr('d', demandLine).attr('stroke-dasharray', function () {
+        var totalLength = this.getTotalLength();
+        return totalLength + ' ' + totalLength;
+      }).attr('stroke-dashoffset', function () {
+        var totalLength = this.getTotalLength();
+        return totalLength;
+      }).transition().duration(2000).attr('stroke-dashoffset', 0);
+
+      // Dibujar la línea de oferta
+      svg.append('path').datum(data).attr('fill', 'none').attr('stroke', '#3498DB').attr('stroke-width', 2).attr('d', supplyLine).attr('stroke-dasharray', function () {
+        var totalLength = this.getTotalLength();
+        return totalLength + ' ' + totalLength;
+      }).attr('stroke-dashoffset', function () {
+        var totalLength = this.getTotalLength();
+        return totalLength;
+      }).transition().duration(2000).attr('stroke-dashoffset', 0);
+
+      // Agregar etiquetas con números encima de la línea de demanda
+      svg.selectAll('.demand-label').data(data).enter().append('text').attr('class', 'demand-label').attr('x', function (d) {
+        return x(d.demand);
+      }).attr('y', function (d) {
+        return y(d.price) - 10;
+      }).text(function (d) {
+        return formatNumber(d.price);
+      }).style('font-size', '12px').style('font-weight', 'bold').style('text-anchor', 'middle').attr('opacity', 0).transition().delay(2000).duration(500).attr('opacity', 1);
+
+      // Agregar etiquetas con números encima de la línea de oferta
+      svg.selectAll('.supply-label').data(data).enter().append('text').attr('class', 'supply-label').attr('x', function (d) {
+        return x(d.supply);
+      }).attr('y', function (d) {
+        return y(d.price) - 10;
+      }).text(function (d) {
+        return formatNumber(d.price);
+      }).style('font-size', '12px').style('font-weight', 'bold').style('text-anchor', 'middle').attr('opacity', 0).transition().delay(2000).duration(500).attr('opacity', 1);
+
+      // Dibujar el punto de equilibrio
+      var equilibriumPoint = {
+        price: 18,
+        demand: 6400,
+        supply: 6400
+      };
+      svg.append('circle').attr('cx', x(equilibriumPoint.demand)).attr('cy', y(equilibriumPoint.price)).attr('r', 4).attr('fill', 'black').attr('opacity', 0).transition().delay(2500).duration(500).attr('opacity', 1);
+
+      // Etiqueta de punto de equilibrio
+      svg.append('rect').attr('x', x(equilibriumPoint.demand) - 53).attr('y', y(equilibriumPoint.price) + 30).attr('width', 105).attr('height', 20).attr('rx', 10).attr('fill', '#F5F5F5').attr('stroke', '#ccc').attr('stroke-width', 1).attr('opacity', 0).transition().delay(2500).duration(500).attr('opacity', 1);
+
+      // Dibujar la línea central
+      svg.append('line').attr('x1', x(equilibriumPoint.demand)).attr('y1', y.range()[0]).attr('x2', x(equilibriumPoint.demand)).attr('y2', y.range()[1]).attr('stroke', '#ccc').attr('stroke-width', 1).attr('stroke-dasharray', '3,3');
+      svg.append('text').attr('x', x(equilibriumPoint.demand)).attr('y', y(equilibriumPoint.price) + 45).attr('text-anchor', 'middle').text('Punto de Equilibrio').style('font-size', '12px').style('font-weight', 'bold').style('fill', '#333').attr('opacity', 0).transition().delay(2500).duration(500).attr('opacity', 1);
+      var aumentoDemandPoint = {
+        price: 5,
+        demand: 9000,
+        supply: 2500
+      };
+      svg.append('circle').attr('cx', x(aumentoDemandPoint.demand)).attr('cy', y(aumentoDemandPoint.price)).attr('r', 4).attr('fill', 'black').attr('opacity', 0).transition().delay(2500).duration(500).attr('opacity', 1);
+
+      // Etiqueta de punto de equilibrio
+      svg.append('rect').attr('x', x(aumentoDemandPoint.demand) - 53).attr('y', y(aumentoDemandPoint.price) + 30).attr('width', 105).attr('height', 20).attr('rx', 10).attr('fill', '#F5F5F5').attr('stroke', '#ccc').attr('stroke-width', 1).attr('opacity', 0).transition().delay(2500).duration(500).attr('opacity', 1);
+
+      // Dibujar la línea central
+      svg.append('line').attr('x1', x(aumentoDemandPoint.demand)).attr('y1', y.range()[0]).attr('x2', x(aumentoDemandPoint.demand)).attr('y2', y.range()[1]).attr('stroke', '#ccc').attr('stroke-width', 1).attr('stroke-dasharray', '3,3');
+      svg.append('text').attr('x', x(aumentoDemandPoint.demand)).attr('y', y(aumentoDemandPoint.price) + 45).attr('text-anchor', 'middle').text('Aumento Demanda').style('font-size', '12px').style('font-weight', 'bold').style('fill', '#333').attr('opacity', 0).transition().delay(2500).duration(500).attr('opacity', 1);
+      var disminucióndemandapoint = {
+        price: 40,
+        demand: 2000,
+        supply: 13000
+      };
+      svg.append('circle').attr('cx', x(disminucióndemandapoint.demand)).attr('cy', y(disminucióndemandapoint.price)).attr('r', 4).attr('fill', 'black').attr('opacity', 0).transition().delay(2500).duration(500).attr('opacity', 1);
+
+      // Etiqueta de punto de equilibrio
+      svg.append('rect').attr('x', x(disminucióndemandapoint.demand) - 53).attr('y', y(disminucióndemandapoint.price) + 30).attr('width', 105).attr('height', 20).attr('rx', 10).attr('fill', '#F5F5F5').attr('stroke', '#ccc').attr('stroke-width', 1).attr('opacity', 0).transition().delay(2500).duration(500).attr('opacity', 1);
+
+      // Dibujar la línea central
+      svg.append('line').attr('x1', x(disminucióndemandapoint.demand)).attr('y1', y.range()[0]).attr('x2', x(disminucióndemandapoint.demand)).attr('y2', y.range()[1]).attr('stroke', '#ccc').attr('stroke-width', 1).attr('stroke-dasharray', '3,3');
+      svg.append('text').attr('x', x(disminucióndemandapoint.demand)).attr('y', y(disminucióndemandapoint.price) + 45).attr('text-anchor', 'middle').text('Disminución Demanda').style('font-size', '12px').style('font-weight', 'bold').style('fill', '#333').attr('opacity', 0).transition().delay(2500).duration(500).attr('opacity', 1);
+      var aumentoofertapoint = {
+        price: 45,
+        demand: 1000,
+        supply: 14500
+      };
+      svg.append('circle').attr('cx', x(aumentoofertapoint.supply)).attr('cy', y(aumentoofertapoint.price)).attr('r', 4).attr('fill', 'black').attr('opacity', 0).transition().delay(2500).duration(500).attr('opacity', 1);
+
+      // Etiqueta de punto de equilibrio
+      svg.append('rect').attr('x', x(aumentoofertapoint.supply) - 53).attr('y', y(aumentoofertapoint.price) + 30).attr('width', 105).attr('height', 20).attr('rx', 10).attr('fill', '#F5F5F5').attr('stroke', '#ccc').attr('stroke-width', 1).attr('opacity', 0).transition().delay(2500).duration(500).attr('opacity', 1);
+
+      // Dibujar la línea central
+      svg.append('line').attr('x1', x(aumentoofertapoint.supply)).attr('y1', y.range()[0]).attr('x2', x(aumentoofertapoint.supply)).attr('y2', y.range()[1]).attr('stroke', '#ccc').attr('stroke-width', 1).attr('stroke-dasharray', '3,3');
+      svg.append('text').attr('x', x(aumentoofertapoint.supply)).attr('y', y(aumentoofertapoint.price) + 45).attr('text-anchor', 'middle').text('Aumento Oferta').style('font-size', '12px').style('font-weight', 'bold').style('fill', '#333').attr('opacity', 0).transition().delay(2500).duration(500).attr('opacity', 1);
+      var disminucionoferta = {
+        price: 5,
+        demand: 9000,
+        supply: 2500
+      };
+      svg.append('circle').attr('cx', x(disminucionoferta.supply)).attr('cy', y(disminucionoferta.price)).attr('r', 4).attr('fill', 'black').attr('opacity', 0).transition().delay(2500).duration(500).attr('opacity', 1);
+
+      // Etiqueta de punto de equilibrio
+      svg.append('rect').attr('x', x(disminucionoferta.supply) - 53).attr('y', y(disminucionoferta.price) + 30).attr('width', 105).attr('height', 20).attr('rx', 10).attr('fill', '#F5F5F5').attr('stroke', '#ccc').attr('stroke-width', 1).attr('opacity', 0).transition().delay(2500).duration(500).attr('opacity', 1);
+
+      // Dibujar la línea central
+      svg.append('line').attr('x1', x(disminucionoferta.supply)).attr('y1', y.range()[0]).attr('x2', x(disminucionoferta.supply)).attr('y2', y.range()[1]).attr('stroke', '#ccc').attr('stroke-width', 1).attr('stroke-dasharray', '3,3');
+      svg.append('text').attr('x', x(disminucionoferta.supply)).attr('y', y(disminucionoferta.price) + 45).attr('text-anchor', 'middle').text('Disminución Oferta').style('font-size', '12px').style('font-weight', 'bold').style('fill', '#333').attr('opacity', 0).transition().delay(2500).duration(500).attr('opacity', 1);
+      // Título
+      svg.append('text').attr('x', width / 2).attr('y', margin.top / 2).attr('text-anchor', 'middle').style('font-size', '16px').style('font-weight', 'bold').text('Oferta y Demanda (Caso Hipotético)').attr('opacity', 0).transition().delay(2000).duration(500).attr('opacity', 1);
+
+      // Leyenda
+      var legendData = [{
+        color: '#CB6D51',
+        label: 'Demanda'
+      }, {
+        color: '#3498DB',
+        label: 'Oferta'
+      }];
+      var legend = svg.append('g').attr('class', 'legend').attr('transform', "translate(".concat(margin.left, ",").concat(height + margin.top + 20, ")")); // Ajusta las coordenadas aquí
+
+      var legendItems = legend.selectAll('.legend-item').data(legendData);
+      var legendItem = legendItems.enter().append('g').attr('class', 'legend-item').attr('transform', function (d, i) {
+        return "translate(0, ".concat(i * 20, ")");
+      });
+      legendItem.append('circle').attr('cx', 10).attr('cy', -470).attr('r', 5).style('fill', function (d) {
+        return d.color;
+      });
+      legendItem.append('text').attr('x', 20).attr('y', -470).attr('dy', '0.35em').text(function (d) {
+        return d.label;
+      }).style('font-size', '12px');
+
+      // Footer
+      svg.append('text').attr('x', width / 2).attr('y', height + margin.top + margin.bottom - 50).attr('text-anchor', 'middle').style('font-size', '12px').style('font-weight', 'bold').text('Gráfico elaboración propia 2023.');
+    };
+    createChart();
+    var handleResize = function handleResize() {
+      d3.select(chartRef.current).select('svg').remove();
+      createChart();
+    };
+    window.addEventListener('resize', handleResize);
+    return function () {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  return /*#__PURE__*/_react.default.createElement("div", {
+    ref: chartRef,
+    style: {
+      width: '100%',
+      justifyContent: 'center',
+      textAlign: 'center'
+    }
+  });
+};
+var _default = SupplyDemandChart;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","d3":"../node_modules/d3/src/index.js"}],"Slides/WideScreen/WorkSlide/News.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireDefault(require("react"));
+var _styledComponents = _interopRequireWildcard(require("styled-components"));
+var _breakpoints = _interopRequireDefault(require("../../../Assets/Responsive/breakpoints"));
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7;
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+var fadeInAnimation = (0, _styledComponents.keyframes)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n"])));
+var Container = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  height: 100vh;\n  width: 100%;\n  font-family: 'AvenirRoman';\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n  margin-top: -200px;\n  animation: ", " 1s ease-in-out;\n\n  &.fade-in {\n    opacity: 1;\n  }\n  @media ", " {\n    padding: 10px;\n    margin-top: -20px;\n    margin-bottom: -20px;\n\n  }\n  @media ", " {\n    padding: 10px;\n    margin-top: -20px;\n    margin-bottom: -20px;\n\n  }\n\n  @media ", " {\n    padding: 20px;\n    margin-top: -100px;\n\n  }\n\n  @media ", " {\n    padding: 0px;\n    margin-top: -200px;\n\n  }\n\n  @media ", " {\n    padding: 0px;\n    margin-top: -200px;\n\n  }\n"])), fadeInAnimation, _breakpoints.default.mobileS, _breakpoints.default.mobileM, _breakpoints.default.tablet, _breakpoints.default.laptop, _breakpoints.default.desktop);
+var Title = _styledComponents.default.h1(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  font-size: 100px;\n  font-family: 'AvenirHeavy';\n  color: #D07131;\n\n  @media ", " {\n    font-size: 50px;\n    margin-bottom: 0;\n    margin-top: 0;\n  }\n  @media ", " {\n    font-size: 50px;\n    margin-bottom: 0;\n    margin-top: 0;\n  }\n\n  @media ", " {\n    font-size: 80px;\n    margin-bottom: 0px;\n    margin-top: 0;\n  }\n\n  @media ", " {\n    font-size: 100px;\n    margin-bottom: 0px;\n    margin-top: 0;\n  }\n\n  @media ", " {\n    font-size: 100px;\n    margin-bottom: 0px;\n    margin-top: 0;\n  }\n"])), _breakpoints.default.mobileS, _breakpoints.default.mobileM, _breakpoints.default.tablet, _breakpoints.default.laptop, _breakpoints.default.desktop);
+var NewsCardContainer = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-wrap: wrap;\n  margin-top: 0px; /* Reducir el espacio entre el t\xEDtulo y las tarjetas */\n\n  @media ", " {\n    flex-direction: column;\n    align-items: stretch;\n    justify-content: center;\n    margin-top: 20px;\n  }\n\n  @media ", " {\n    flex-direction: row;\n    align-items: center;\n    justify-content: center;\n    margin-top: 0px;\n  }\n\n  @media ", " {\n    flex-direction: row;\n    align-items: center;\n    justify-content: center;\n    margin-top: 0px;\n  }\n\n  @media ", " {\n    flex-direction: row;\n    align-items: center;\n    justify-content: center;\n    margin-top: 0px;\n  }\n\n  @media ", " {\n    flex-direction: row;\n    align-items: center;\n    justify-content: center;\n    margin-top: 0px;\n  }\n"])), _breakpoints.default.mobileS, _breakpoints.default.mobileM, _breakpoints.default.tablet, _breakpoints.default.laptop, _breakpoints.default.desktop);
+var NewsCard = _styledComponents.default.a(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  background-color: #f0f0f0;\n  padding: 20px;\n  margin: 20px;\n  text-decoration: none;\n  cursor: pointer;\n  transition: background-color 0.3s;\n\n  &:hover {\n    background-color: #e0e0e0;\n  }\n"])));
+var NewsTitle = _styledComponents.default.h2(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  font-size: 24px;\n  font-family: 'AvenirHeavy';\n  color: #333;\n  margin-bottom: 5px;\n\n  @media ", " {\n    font-size: 26px;\n    margin-bottom: 6px;\n  }\n  @media ", " {\n    font-size: 28px;\n    margin-bottom: 6px;\n  }\n\n  @media ", " {\n    font-size: 30px;\n    margin-bottom: 8px;\n  }\n\n  @media ", " {\n    font-size: 30px;\n    margin-bottom: 10px;\n  }\n\n  @media ", " {\n    font-size: 30px;\n    margin-bottom: 10px;\n  }\n"])), _breakpoints.default.mobileS, _breakpoints.default.mobileM, _breakpoints.default.tablet, _breakpoints.default.laptop, _breakpoints.default.desktop);
+var NewsContent = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  font-size: 16px;\n  font-family: 'AvenirBook';\n  color: #666;\n  margin-bottom: 10px;\n  @media ", " {\n    font-size: 16px;\n    margin-bottom: 10px;\n  }\n  @media ", " {\n    font-size: 16px;\n    margin-bottom: 8px;\n  }\n\n  @media ", " {\n    font-size: 20px;\n    margin-bottom: 10px;\n  }\n\n  @media ", " {\n    font-size: 20px;\n    margin-bottom: 10px;\n  }\n\n  @media ", " {\n    font-size: 20px;\n    margin-bottom: 10px;\n  }\n"])), _breakpoints.default.mobileS, _breakpoints.default.mobileM, _breakpoints.default.tablet, _breakpoints.default.laptop, _breakpoints.default.desktop);
+var News = function News() {
+  var _React$useState = _react.default.useState(false),
+    _React$useState2 = _slicedToArray(_React$useState, 2),
+    fadeIn = _React$useState2[0],
+    setFadeIn = _React$useState2[1];
+  _react.default.useEffect(function () {
+    setFadeIn(true);
+  }, []);
+  return /*#__PURE__*/_react.default.createElement(Container, {
+    className: fadeIn ? 'fade-in' : ''
+  }, /*#__PURE__*/_react.default.createElement(Title, null, "Noticias"), /*#__PURE__*/_react.default.createElement(NewsCardContainer, null, /*#__PURE__*/_react.default.createElement(NewsCard, {
+    href: "https://uddventures.udd.cl/blog/el-aumento-de-la-demanda-del-cobre-y-la-oportunidad-para-chile",
+    target: "_blank"
+  }, /*#__PURE__*/_react.default.createElement(NewsTitle, null, "Caso Aumento de la Demanda"), /*#__PURE__*/_react.default.createElement(NewsContent, null, "\u201CEl aumento de la demanda del cobre y la oportunidad para Chile\u201D")), /*#__PURE__*/_react.default.createElement(NewsCard, {
+    href: "https://www.df.cl/empresas/mineria/escondida-en-43-dias-de-huelga-se-dejaron-de-producir-unos-us-880",
+    target: "_blank"
+  }, /*#__PURE__*/_react.default.createElement(NewsTitle, null, "Disminuci\xF3n de la Oferta"), /*#__PURE__*/_react.default.createElement(NewsContent, null, "\u201CEscondida: en 43 d\xEDas de huelga se dejaron de producir unos US$ 880 millones\u201D")), /*#__PURE__*/_react.default.createElement(NewsCard, {
+    href: "https://www.guiaminera.cl/cobre-sube-por-amenaza-de-interrupcion-de-suministros-en-un-chile-convulsionado/",
+    target: "_blank"
+  }, /*#__PURE__*/_react.default.createElement(NewsTitle, null, "Disminuci\xF3n de la Demanda"), /*#__PURE__*/_react.default.createElement(NewsContent, null, "\u201CCobre sube por amenaza de interrupci\xF3n de suministros en un Chile convulsionado.\u201D")), /*#__PURE__*/_react.default.createElement(NewsCard, {
+    href: "https://www.bnamericas.com/es/reportajes/bajo-la-lupa-tres-megaproyectos-de-cobre-y-oro-en-construccion-en-chile",
+    target: "_blank"
+  }, /*#__PURE__*/_react.default.createElement(NewsTitle, null, "Aumento de la Oferta"), /*#__PURE__*/_react.default.createElement(NewsContent, null, "\u201CBajo la lupa: tres megaproyectos de cobre y oro en construcci\xF3n en Chile\u201D"))));
+};
+var _default = News;
+exports.default = _default;
 },{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","../../../Assets/Responsive/breakpoints":"Assets/Responsive/breakpoints.js"}],"Slides/WideScreen/WorkSlide/Work.js":[function(require,module,exports) {
 "use strict";
 
@@ -62697,6 +63032,8 @@ var _DolarChart = _interopRequireDefault(require("./DolarChart"));
 var _Presentation_FMercado = _interopRequireDefault(require("./Presentation_FMercado"));
 var _Presentation = _interopRequireDefault(require("../HeroSlide/Presentation"));
 var _Presentation2 = _interopRequireDefault(require("../HeroSlide/Presentation2"));
+var _DemandSupplyChart = _interopRequireDefault(require("./DemandSupplyChart"));
+var _News = _interopRequireDefault(require("./News"));
 var _templateObject;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
@@ -62715,7 +63052,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-var Container = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    display: flex;\n    /* border: 1px dashed red; */\n    height:3585vh;\n    \n"])));
+var Container = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    display: flex;\n    /* border: 1px dashed red; */\n    height:3685vh;\n    \n"])));
 var Work = /*#__PURE__*/function (_Component) {
   _inherits(Work, _Component);
   var _super = _createSuper(Work);
@@ -62905,6 +63242,62 @@ var Work = /*#__PURE__*/function (_Component) {
       roles: [''],
       projectGraph: '',
       projectButton: /*#__PURE__*/_react.default.createElement(_Presentation_FMercado.default, null)
+    }, {
+      number: '01',
+      projectName: 'Aumento en la demanda del bien transado',
+      projectDesc: 'Ocurre cuando la demanda global de un bien, como el cobre, se incrementa debido al desarrollo de nuevas tecnologías que lo requieren. Esto provoca un desplazamiento hacia la derecha de la curva de demanda, lo que resulta en un aumento del precio y la cantidad de cobre que Chile puede vender en el mercado internacional. Además, este aumento en la demanda puede impulsar inversiones y generar empleo en la industria minera chilena.',
+      projectType: '',
+      roles: [''],
+      projectGraph: '',
+      projectButton: ''
+    }, {
+      number: '02',
+      projectName: 'Disminución de la oferta del bien transado en el mercado.',
+      projectDesc: 'Una disminución en la oferta del bien transado en el mercado puede ocurrir debido a problemas laborales, restricciones ambientales, baja calidad del mineral o dificultades técnicas en la extracción. Esto provoca un desplazamiento hacia la izquierda de la curva de oferta de cobre, lo que resulta en un aumento del precio y una reducción en la cantidad de cobre que Chile puede ofrecer en el mercado internacional.',
+      projectType: '',
+      roles: [''],
+      projectGraph: '',
+      projectButton: ''
+    }, {
+      number: '03',
+      projectName: 'Disminución de la demanda del bien transado en el mercado.',
+      projectDesc: 'Una disminución en la oferta del bien transado en el mercado puede ocurrir debido a problemas laborales, restricciones ambientales, baja calidad del mineral o dificultades técnicas en la extracción. Esto provoca un desplazamiento hacia la izquierda de la curva de oferta de cobre, lo que resulta en un aumento del precio y una reducción en la cantidad de cobre que Chile puede ofrecer en el mercado internacional.',
+      projectType: '',
+      roles: [''],
+      projectGraph: '',
+      projectButton: ''
+    }, {
+      number: '04',
+      projectName: 'Aumento de la oferta del bien transado en el mercado.',
+      projectDesc: 'Si se descubren nuevas minas de cobre en Chile o se logra aumentar la productividad de las minas existentes mediante mejoras tecnológicas, la oferta de cobre del país podría aumentar. Esto provocaría un desplazamiento hacia la derecha de la curva de oferta, lo que resultaría en una reducción del precio del cobre y un aumento en la cantidad de cobre que Chile puede vender en el mercado internacional. Esta situación podría beneficiar a la economía chilena al incrementar las exportaciones totales, aunque los ingresos por unidad de cobre podrían disminuir debido a la disminución de los precios.',
+      projectType: '',
+      roles: [''],
+      projectGraph: '',
+      projectButton: ''
+    }, {
+      number: '',
+      projectName: '',
+      projectDesc: '',
+      projectType: '',
+      roles: [''],
+      projectGraph: /*#__PURE__*/_react.default.createElement(_DemandSupplyChart.default, null),
+      projectButton: ''
+    }, {
+      number: '',
+      projectName: '',
+      projectDesc: '',
+      projectType: '',
+      roles: [''],
+      projectGraph: '',
+      projectButton: /*#__PURE__*/_react.default.createElement(_News.default, null)
+    }, {
+      number: '',
+      projectName: '',
+      projectDesc: '',
+      projectType: '',
+      roles: [''],
+      projectGraph: '',
+      projectButton: ''
     }];
     return _this;
   }
@@ -62975,7 +63368,7 @@ var Work = /*#__PURE__*/function (_Component) {
 }(_react.Component);
 var _default = Work;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","./TextContent":"Slides/WideScreen/WorkSlide/TextContent.js","./CooperChart":"Slides/WideScreen/WorkSlide/CooperChart.js","./LineChartPIB":"Slides/WideScreen/WorkSlide/LineChartPIB.js","./LineChartWork":"Slides/WideScreen/WorkSlide/LineChartWork.js","./LineChartTPM":"Slides/WideScreen/WorkSlide/LineChartTPM.js","./LineChartIPC":"Slides/WideScreen/WorkSlide/LineChartIPC.js","./ChartBalanza":"Slides/WideScreen/WorkSlide/ChartBalanza.js","./MyButton":"Slides/WideScreen/WorkSlide/MyButton.js","./LithiumChart":"Slides/WideScreen/WorkSlide/LithiumChart.js","./SilverChart":"Slides/WideScreen/WorkSlide/SilverChart.js","./Presentation_Dmacro":"Slides/WideScreen/WorkSlide/Presentation_Dmacro.js","./DolarChart":"Slides/WideScreen/WorkSlide/DolarChart.js","./Presentation_FMercado":"Slides/WideScreen/WorkSlide/Presentation_FMercado.js","../HeroSlide/Presentation":"Slides/WideScreen/HeroSlide/Presentation.js","../HeroSlide/Presentation2":"Slides/WideScreen/HeroSlide/Presentation2.js"}],"Assets/Images/Social/twitter.svg":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","./TextContent":"Slides/WideScreen/WorkSlide/TextContent.js","./CooperChart":"Slides/WideScreen/WorkSlide/CooperChart.js","./LineChartPIB":"Slides/WideScreen/WorkSlide/LineChartPIB.js","./LineChartWork":"Slides/WideScreen/WorkSlide/LineChartWork.js","./LineChartTPM":"Slides/WideScreen/WorkSlide/LineChartTPM.js","./LineChartIPC":"Slides/WideScreen/WorkSlide/LineChartIPC.js","./ChartBalanza":"Slides/WideScreen/WorkSlide/ChartBalanza.js","./MyButton":"Slides/WideScreen/WorkSlide/MyButton.js","./LithiumChart":"Slides/WideScreen/WorkSlide/LithiumChart.js","./SilverChart":"Slides/WideScreen/WorkSlide/SilverChart.js","./Presentation_Dmacro":"Slides/WideScreen/WorkSlide/Presentation_Dmacro.js","./DolarChart":"Slides/WideScreen/WorkSlide/DolarChart.js","./Presentation_FMercado":"Slides/WideScreen/WorkSlide/Presentation_FMercado.js","../HeroSlide/Presentation":"Slides/WideScreen/HeroSlide/Presentation.js","../HeroSlide/Presentation2":"Slides/WideScreen/HeroSlide/Presentation2.js","./DemandSupplyChart":"Slides/WideScreen/WorkSlide/DemandSupplyChart.js","./News":"Slides/WideScreen/WorkSlide/News.js"}],"Assets/Images/Social/twitter.svg":[function(require,module,exports) {
 module.exports = "/twitter.920364fd.svg";
 },{}],"Assets/Images/Social/git.svg":[function(require,module,exports) {
 module.exports = "/git.1a000b88.svg";
@@ -63101,7 +63494,7 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 var Container = _styledComponents.default.section(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    height:100vh;/* Since pageSplitTime is 1.4 */\n    width:100%;\n    text-align:center;\n    /* border: 1px solid blue; */\n    position: relative;\n    overflow: hidden;\n"])));
-var ContactTitle = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  transition: transform 0.5s ease-out;\n  font-family: 'AvenirHeavy';\n  font-size: 200px;\n  color: #EEE;\n  top:12%;\n  left:-70%;\n  @media ", " {\n    font-size: 180px;\n  }\n  @media ", " {\n    font-size: 200px;\n  }\n  @media ", " {\n    font-size: 350px;\n  }\n"])), _breakpoints.default.laptop, _breakpoints.default.laptopL, _breakpoints.default.desktop);
+var ContactTitle = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  transition: transform 0.5s ease-out;\n  font-family: 'AvenirHeavy';\n  font-size: 200px;\n  color: #D07131;\n  top:12%;\n  left:-70%;\n  @media ", " {\n    font-size: 50px;\n  }\n  @media ", " {\n    font-size: 70px;\n  }\n  @media ", " {\n    font-size: 90px;\n  }\n  @media ", " {\n    font-size: 140px;\n  }\n  @media ", " {\n    font-size: 200px;\n  }\n  @media ", " {\n    font-size: 350px;\n  }\n"])), _breakpoints.default.mobileS, _breakpoints.default.mobileM, _breakpoints.default.tablet, _breakpoints.default.laptop, _breakpoints.default.laptopL, _breakpoints.default.desktop);
 var SocialMediaIcons = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  /* border: 1px solid black; */\n  margin-left: 20%;\n  margin-right: 20%;\n  z-index: 1;\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: space-around;\n"])));
 var Contact = /*#__PURE__*/function (_Component) {
   _inherits(Contact, _Component);
@@ -63156,14 +63549,14 @@ var Contact = /*#__PURE__*/function (_Component) {
       var scrollPercent = this.state.scrollPercent;
       return /*#__PURE__*/_react.default.createElement(Container, null, /*#__PURE__*/_react.default.createElement(ContactTitle, {
         scrollPercent: scrollPercent
-      }, "CONTACT"), /*#__PURE__*/_react.default.createElement(SocialMediaIcons, null, /*#__PURE__*/_react.default.createElement(_SocialLogo.default, {
+      }, "CONTACTO"), /*#__PURE__*/_react.default.createElement(SocialMediaIcons, null, /*#__PURE__*/_react.default.createElement(_SocialLogo.default, {
         imgURL: _git.default,
         alternate: "Github",
         redirectURL: "https://github.com/unzzui"
       }), /*#__PURE__*/_react.default.createElement(_SocialLogo.default, {
         imgURL: _mail.default,
         alternate: "Mail",
-        redirectURL: "mailto:d.bravob@duocuc.cl"
+        redirectURL: "mailto:d.bravob@duocuc.cl,lean.navarrete@duocuc.cl,ru.godoy@duocuc.cl?subject=Consulta%20Examen%20Transversal%20An\xE1lisis%20Econ\xF3mico"
       }), /*#__PURE__*/_react.default.createElement(_SocialLogo.default, {
         imgURL: _linkedin.default,
         alternate: "Linkedin",
@@ -63251,7 +63644,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63266" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59159" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

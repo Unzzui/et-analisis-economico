@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled, { keyframes } from 'styled-components';
 import PropTypes from 'prop-types';
 import device from '../../../Assets/Responsive/breakpoints';
+import LogoDuoc from '../../../Assets/Images/logo.png'
 
 const Stage = styled.div`
 position: relative;
@@ -34,7 +35,7 @@ const TextToReveal = styled.div`
   font-family: ${props => props.fontFam};
   text-align:center;
   @media ${device.mobileM} {
-    font-size: 60px;
+    font-size: 80px;
     animation: ${props => (props.reveal ? moveUp(100) : 'none')} 1s cubic-bezier(0, 0.1, .12, .99) forwards;
     transform: translateY(${60 * 1.4}px);
   }
@@ -70,7 +71,11 @@ animation: ${hideWhiteBlocks} 0.5s linear forwards;
 animation-delay: 2s;
 /* border: 1px solid grey; */
 `;
-
+const Logo = styled.img`
+  width: 400px;
+  height: 100px;
+  margin-bottom: 20px;
+`;
 
 class NameReveal extends Component {
   constructor(props) {
@@ -93,7 +98,7 @@ class NameReveal extends Component {
   }
 
   render() {
-    const { text, fontFam } = this.props;
+    const { text, fontFam,src} = this.props;
     const { reveal } = this.state;
     return (
       <Stage>
@@ -101,6 +106,7 @@ class NameReveal extends Component {
           fontFam={fontFam}
           reveal={reveal}
         >
+          
           {text}
         </TextToReveal>
         <WhiteBlock />
