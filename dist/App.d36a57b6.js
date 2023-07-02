@@ -29687,11 +29687,11 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 // import projectData from './projectData'
-var TextContainer = _styledComponents.default.section(_templateObject || (_templateObject = _taggedTemplateLiteral(["\nposition: fixed;\ntop:0;\nleft:0;\ndisplay: flex;\nflex-flow: column nowrap;\n/** border: 5px dashed black; */\nheight:100vh;\nwidth: 100%;\n"])));
+var TextContainer = _styledComponents.default.section(_templateObject || (_templateObject = _taggedTemplateLiteral(["\nposition: fixed;\ntop:0;\nleft:0;\ndisplay: flex;\nflex-flow: column nowrap;\n/** border: 5px dashed black; */\nheight:100vh;\nwidth: 100%;\n\n@media ", " {\n  margin-bottom:80px;\n}\n@media ", " {\n  margin-bottom: 80px;\n\n}\n@media ", " {\n  margin-bottom: 80px;\n}\n@media ", " {\n  margin-bottom: 80px;\n}\n@media ", " {\n  margin-bottom: 80px;\n}\n"])), _breakpoints.default.mobileS, _breakpoints.default.mobileM, _breakpoints.default.laptop, _breakpoints.default.laptopL, _breakpoints.default.desktop);
 var ProjectGraph = _styledComponents.default.section(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  /** border: 5px dashed black; */\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  width: 100%;\n\n"])));
 var ProjectButton = _styledComponents.default.section(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n/** border: 5px dashed black; */\nheight:100vh;\nwidth: 100%;  \n"])));
 var ProjectName = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  font-family: 'AvenirHeavy';\n  @media ", " {\n    font-size: 40px;\n  }\n  @media ", " {\n    font-size: 50px;\n  }\n  @media ", " {\n    font-size: 60px;\n  }\n  @media ", " {\n    font-size: 70px;\n  }\n  @media ", " {\n    font-size: 110px;\n  }\n  /* border: 1px dashed black; */\n"])), _breakpoints.default.mobileS, _breakpoints.default.mobileM, _breakpoints.default.laptop, _breakpoints.default.laptopL, _breakpoints.default.desktop);
-var ProjectDesc = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  padding-top:2%;\n  font-family: 'AvenirBook';\n  @media ", " {\n    font-size: 10px;\n  }\n  @media ", " {\n    font-size: 20px;\n  }\n  @media ", " {\n    font-size: 25px;\n  }\n  @media ", " {\n    font-size: 30px;\n  }\n  @media ", " {\n    font-size: 50px;\n  }\n  /* border: 1px dashed black; */\n"])), _breakpoints.default.mobileS, _breakpoints.default.mobileM, _breakpoints.default.laptop, _breakpoints.default.laptopL, _breakpoints.default.desktop);
+var ProjectDesc = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  padding-top:2%;\n  font-family: 'AvenirBook';\n  @media ", " {\n    margin-bottom:80px;\n    font-size: 10px;\n  }\n  @media ", " {\n    font-size: 20px;\n    margin-bottom: 80px;\n\n  }\n  @media ", " {\n    font-size: 25px;\n  }\n  @media ", " {\n    font-size: 30px;\n  }\n  @media ", " {\n    font-size: 50px;\n  }\n  /* border: 1px dashed black; */\n"])), _breakpoints.default.mobileS, _breakpoints.default.mobileM, _breakpoints.default.laptop, _breakpoints.default.laptopL, _breakpoints.default.desktop);
 var MyRole = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  padding-top:5%;\n  font-family: 'AvenirMedium';\n  @media ", " {\n    font-size: 15px;\n  }\n  @media ", " {\n    font-size: 20px;\n  }\n  @media ", " {\n    font-size: 25px;\n  }\n  @media ", " {\n    font-size: 30px;\n  }\n  @media ", " {\n    font-size: 50px;\n  }\n  /* border: 1px dashed black; */\n"])), _breakpoints.default.mobileS, _breakpoints.default.mobileM, _breakpoints.default.laptop, _breakpoints.default.laptopL, _breakpoints.default.desktop);
 var ProjectID = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  font-family: 'AvenirHeavy';\n  @media ", " {\n    font-size: 25px;\n  }\n  @media ", " {\n    font-size: 30px;\n  }\n  @media ", " {\n    font-size: 58px;\n  }\n  /* border: 1px dashed black; */\n  padding: 5%;\n"])), _breakpoints.default.laptop, _breakpoints.default.laptopL, _breakpoints.default.desktop);
 var ProjectType = _styledComponents.default.div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  font-family: 'AvenirHeavy';\n  @media ", " {\n    font-size: 25px;\n  }\n  @media ", " {\n    font-size: 30px;\n  }\n  @media ", " {\n    font-size: 58px;\n  }\n  /* border: 1px dashed black; */\n  padding: 5%;\n"])), _breakpoints.default.laptop, _breakpoints.default.laptopL, _breakpoints.default.desktop);
@@ -63125,7 +63125,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-var Container = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    display: flex;\n    /* border: 1px dashed red; */\n    height:3885vh;\n    \n"])));
+var Container = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    display: flex;\n    /* border: 1px dashed red; */\n    height:3930vh;\n    \n"])));
 var Work = /*#__PURE__*/function (_Component) {
   _inherits(Work, _Component);
   var _super = _createSuper(Work);
@@ -63378,6 +63378,14 @@ var Work = /*#__PURE__*/function (_Component) {
       projectType: '',
       roles: [''],
       projectGraph: /*#__PURE__*/_react.default.createElement(_FlowCircularIncome.default, null),
+      projectButton: ''
+    }, {
+      number: '',
+      projectName: 'Muchas Gracias !',
+      projectDesc: '',
+      projectType: '',
+      roles: [''],
+      projectGraph: '',
       projectButton: ''
     }, {
       number: '',
@@ -63733,7 +63741,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52223" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53526" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

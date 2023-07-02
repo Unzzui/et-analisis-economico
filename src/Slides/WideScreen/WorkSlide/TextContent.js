@@ -12,6 +12,23 @@ flex-flow: column nowrap;
 /** border: 5px dashed black; */
 height:100vh;
 width: 100%;
+
+@media ${device.mobileS} {
+  margin-bottom:80px;
+}
+@media ${device.mobileM} {
+  margin-bottom: 80px;
+
+}
+@media ${device.laptop} {
+  margin-bottom: 80px;
+}
+@media ${device.laptopL} {
+  margin-bottom: 80px;
+}
+@media ${device.desktop} {
+  margin-bottom: 80px;
+}
 `;
 
 const ProjectGraph = styled.section`
@@ -54,10 +71,13 @@ const ProjectDesc = styled.div`
   padding-top:2%;
   font-family: 'AvenirBook';
   @media ${device.mobileS} {
+    margin-bottom:80px;
     font-size: 10px;
   }
   @media ${device.mobileM} {
     font-size: 20px;
+    margin-bottom: 80px;
+
   }
   @media ${device.laptop} {
     font-size: 25px;

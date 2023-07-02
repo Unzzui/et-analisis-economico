@@ -23,7 +23,7 @@ import FlowCircularIncome from './FlowCircularIncome';
 const Container = styled.div`
     display: flex;
     /* border: 1px dashed red; */
-    height:3885vh;
+    height:3930vh;
     
 `;
 
@@ -347,6 +347,17 @@ class Work extends Component {
 
       },
          {
+        number: '',
+        projectName: 'Muchas Gracias !',
+        projectDesc: '',
+        projectType: '',
+        roles: [''],
+        projectGraph: '',
+        projectButton:'',
+
+      },
+  
+      {
         number: '',
         projectName: '',
         projectDesc: '',
