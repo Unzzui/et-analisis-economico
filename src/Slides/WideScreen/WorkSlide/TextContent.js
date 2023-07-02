@@ -71,12 +71,12 @@ const ProjectDesc = styled.div`
   padding-top:2%;
   font-family: 'AvenirBook';
   @media ${device.mobileS} {
-    margin-bottom:80px;
+    margin-bottom:300px;
     font-size: 10px;
   }
   @media ${device.mobileM} {
     font-size: 20px;
-    margin-bottom: 80px;
+    margin-bottom: 300px;
 
   }
   @media ${device.laptop} {
