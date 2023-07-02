@@ -92,10 +92,10 @@ const SVGObject = styled.object`
   width: 1200px;
     
   @media ${device.mobileS} {
-    width: 300px;
+    width: 350px;
   }
   @media ${device.mobileM} {
-    width: 300px;
+    width: 350px;
   }
   @media ${device.tablet} {
     width: 1000px;

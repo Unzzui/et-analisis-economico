@@ -60853,12 +60853,12 @@ var CopperProductionChart = function CopperProductionChart() {
       }) + 2000]).range([height, 0]);
       var svg = d3.select(chartRef.current).append('svg').attr('width', width + margin.left + margin.right).attr('height', height + margin.top + margin.bottom).append('g').attr('transform', "translate(".concat(margin.left, ",").concat(margin.top, ")"));
       svg.append('g').attr('transform', "translate(0,".concat(height, ")")).call(d3.axisBottom(x));
-      svg.append('text').attr('x', width / 2).attr('y', height + margin.bottom - 75).attr('text-anchor', 'middle').text('País').style('font-size', '14px').style('font-weight', 'bold');
+      svg.append('text').attr('x', width / 2).attr('y', height + margin.bottom - 75).attr('text-anchor', 'middle').text('País').style('font-size', '14px').style('font-family', 'AvenirBook').style('font-weight', 'bold');
       svg.append('g').call(d3.axisLeft(yBars));
-      svg.append('text').attr('transform', 'rotate(-90)').attr('x', -height / 2).attr('y', -margin.left + 40).attr('text-anchor', 'middle').text('Producción (toneladas métricas)').style('font-size', '14px').style('font-weight', 'bold');
+      svg.append('text').attr('transform', 'rotate(-90)').attr('x', -height / 2).attr('y', -margin.left + 40).attr('text-anchor', 'middle').text('Producción (toneladas métricas)').style('font-family', 'AvenirBook').style('font-size', '14px').style('font-weight', 'bold');
       svg.append('g').selectAll('line').data(d3.range(5000, d3.max(data, function (d) {
         return d.produccion;
-      }) + 5000, 5000)).enter().append('line').attr('class', 'horizontal-line').attr('x1', 0).attr('y1', function (d) {
+      }) + 5000, 5000)).enter().append('line').attr('class', 'horizontal-line').style('font-family', 'AvenirBook').attr('x1', 0).attr('y1', function (d) {
         return yBars(d);
       }).attr('x2', width).attr('y2', function (d) {
         return yBars(d);
@@ -60867,7 +60867,7 @@ var CopperProductionChart = function CopperProductionChart() {
         return d.pais === 'Chile' ? 'bar bar-chile' : 'bar';
       }).attr('x', function (d) {
         return x(d.pais);
-      }).attr('y', height).attr('width', x.bandwidth()).attr('height', 0).attr('fill', function (d) {
+      }).attr('y', height).attr('width', x.bandwidth()).attr('height', 0).style('font-family', 'AvenirBook').attr('fill', function (d) {
         return d.pais === 'Chile' ? '#CB6D51' : 'silver';
       }).transition().duration(2000).attr('y', function (d) {
         return yBars(d.produccion);
@@ -60880,10 +60880,10 @@ var CopperProductionChart = function CopperProductionChart() {
         return x(d.pais) + x.bandwidth() / 2;
       }).attr('y', height).text(function (d) {
         return formatNumber(d.produccion);
-      }).style('font-size', '12px').style('text-anchor', 'middle').transition().duration(2000).attr('y', function (d) {
+      }).style('font-size', '12px').style('font-family', 'AvenirBook').style('text-anchor', 'middle').transition().duration(2000).attr('y', function (d) {
         return yBars(d.produccion) - 10;
       });
-      svg.append('text').attr('x', width / 2).attr('y', margin.top / 2).attr('text-anchor', 'middle').style('font-size', '16px').style('font-weight', 'bold').text('Producción de Cobre por País (2022)');
+      svg.append('text').attr('x', width / 2).attr('y', margin.top / 2).attr('text-anchor', 'middle').style('font-size', '16px').style('font-family', 'AvenirBook').style('font-weight', 'bold').text('Producción de Cobre por País (2022)');
       var legendData = [{
         color: '#CB6D51',
         label: 'Chile'
@@ -60893,7 +60893,7 @@ var CopperProductionChart = function CopperProductionChart() {
       }];
       var legend = svg.append('g').attr('class', 'legend').attr('transform', "translate(".concat(margin.left, ",").concat(height + margin.top + 20, ")"));
       var legendItems = legend.selectAll('.legend-item').data(legendData);
-      var legendItem = legendItems.enter().append('g').attr('class', 'legend-item').attr('transform', function (d, i) {
+      var legendItem = legendItems.enter().append('g').style('font-family', 'AvenirBook').attr('class', 'legend-item').attr('transform', function (d, i) {
         return "translate(0, ".concat(i * 20, ")");
       });
       legendItem.append('rect').attr('x', 0).attr('y', -10).attr('width', 10).attr('height', 10).style('fill', function (d) {
@@ -60901,9 +60901,9 @@ var CopperProductionChart = function CopperProductionChart() {
       }).attr('opacity', 0).transition().delay(1500).duration(500).attr('opacity', 1);
       legendItem.append('text').attr('x', 15).attr('y', 0).attr('dy', '0.35em').attr('opacity', 0).text(function (d) {
         return d.label;
-      }).style('font-size', '12px').transition().delay(2000).duration(500).attr('opacity', 1).style('fill', 'black');
+      }).style('font-family', 'AvenirBook').style('font-size', '12px').transition().delay(2000).duration(500).attr('opacity', 1).style('fill', 'black');
       // Footer
-      svg.append('text').attr('x', width / 2).attr('y', height + margin.top + margin.bottom - 50).attr('text-anchor', 'middle').style('font-size', '12px').style('font-weight', 'bold').text('Datos extraídos de Cochilco 2023').on('click', function () {
+      svg.append('text').attr('x', width / 2).attr('y', height + margin.top + margin.bottom - 50).attr('text-anchor', 'middle').style('font-size', '12px').style('font-family', 'AvenirBook').style('font-weight', 'bold').text('Datos extraídos de Cochilco 2023').on('click', function () {
         window.open('https://www.cochilco.cl/Paginas/Inicio.aspx', '_blank');
       });
     };
@@ -61798,13 +61798,13 @@ var BalanzaChart = function BalanzaChart() {
       });
 
       // Crear el elemento SVG
-      var svg = d3.select(chartRef.current).append('svg').attr('width', width + margin.left + margin.right).attr('height', height + margin.top + margin.bottom).append('g').style('font-family', 'AvenirRoman').attr('transform', "translate(".concat(margin.left, ",").concat(margin.top, ")"));
+      var svg = d3.select(chartRef.current).append('svg').attr('width', width + margin.left + margin.right).attr('height', height + margin.top + margin.bottom).append('g').style('font-family', 'AvenirBook').attr('transform', "translate(".concat(margin.left, ",").concat(margin.top, ")"));
 
       // Crear el eje x
       svg.append('g').attr('transform', "translate(0,".concat(height, ")")).call(d3.axisBottom(x));
 
       // Etiqueta del eje x
-      svg.append('text').attr('x', width / 2).attr('y', height + margin.bottom - 75).attr('text-anchor', 'middle').text('Año').style('font-size', '14px').style('font-weight', 'bold');
+      svg.append('text').attr('x', width / 2).attr('y', height + margin.bottom - 75).attr('text-anchor', 'middle').text('Año').style('font-family', 'AvenirBook').style('font-size', '14px').style('font-weight', 'bold');
 
       // Crear el eje y para las barras
       svg.append('g').call(d3.axisLeft(yBars));
@@ -61813,15 +61813,15 @@ var BalanzaChart = function BalanzaChart() {
       svg.append('g').attr('transform', "translate(".concat(width, ",0)")).call(d3.axisRight(yLines));
 
       // Etiqueta del eje y para las barras
-      svg.append('text').attr('transform', 'rotate(-90)').attr('x', -height / 2).attr('y', -margin.left + 40).attr('text-anchor', 'middle').text('Valor').style('font-size', '14px').style('font-weight', 'bold');
+      svg.append('text').attr('transform', 'rotate(-90)').attr('x', -height / 2).attr('y', -margin.left + 40).attr('text-anchor', 'middle').style('font-family', 'AvenirBook').text('Valor').style('font-size', '14px').style('font-weight', 'bold');
 
       // Etiqueta del eje y para las líneas
-      svg.append('text').attr('transform', 'rotate(-90)').attr('x', -height / 2).attr('y', width + margin.right + 40).attr('text-anchor', 'middle').text('Valor Exportaciones/Importaciones').style('font-size', '14px').style('font-weight', 'bold');
+      svg.append('text').attr('transform', 'rotate(-90)').attr('x', -height / 2).attr('y', width + margin.right + 40).attr('text-anchor', 'middle').style('font-family', 'AvenirBook').text('Valor Exportaciones/Importaciones').style('font-size', '14px').style('font-weight', 'bold');
 
       // Dibujar las barras de bienes
       svg.selectAll('.bar').data(data).enter().append('rect').attr('class', 'bar').attr('x', function (d) {
         return x(d.Periodo);
-      }).attr('y', height).attr('width', x.bandwidth()).attr('height', 0).attr('fill', '#CB6D51').transition().duration(2000).attr('y', function (d) {
+      }).attr('y', height).attr('width', x.bandwidth()).attr('height', 0).style('font-family', 'AvenirBook').attr('fill', '#CB6D51').transition().duration(2000).attr('y', function (d) {
         return yBars(d.Bienes);
       }).attr('height', function (d) {
         return height - yBars(d.Bienes);
@@ -61850,7 +61850,7 @@ var BalanzaChart = function BalanzaChart() {
         return x(d.Periodo) + x.bandwidth() / 2;
       }).attr('y', height).text(function (d) {
         return formatNumber(d.Bienes);
-      }).style('font-size', '12px').style('font-weight', 'bold').style('text-anchor', 'middle').transition().duration(2000).attr('y', function (d) {
+      }).style('font-family', 'AvenirBook').style('font-size', '12px').style('font-weight', 'bold').style('text-anchor', 'middle').transition().duration(2000).attr('y', function (d) {
         return yBars(d.Bienes) - 10;
       });
 
@@ -61861,7 +61861,7 @@ var BalanzaChart = function BalanzaChart() {
         return yLines(d.Exportaciones) - 10;
       }).text(function (d) {
         return formatNumber(d.Exportaciones);
-      }).style('font-size', '12px').style('font-weight', 'bold').style('text-anchor', 'middle').attr('opacity', 0).transition().delay(2000).duration(500).attr('opacity', 1);
+      }).style('font-family', 'AvenirBook').style('font-size', '12px').style('font-weight', 'bold').style('text-anchor', 'middle').attr('opacity', 0).transition().delay(2000).duration(500).attr('opacity', 1);
 
       // Agregar etiquetas con números encima de las líneas de importaciones
       svg.selectAll('.label-importaciones').data(data).enter().append('text').attr('class', 'label-importaciones').attr('x', function (d) {
@@ -61870,9 +61870,9 @@ var BalanzaChart = function BalanzaChart() {
         return yLines(d.Importaciones) + 30;
       }).text(function (d) {
         return formatNumber(d.Importaciones);
-      }).style('font-size', '12px').style('font-weight', 'bold').style('text-anchor', 'middle').attr('opacity', 0).transition().delay(2000).duration(500).attr('opacity', 1);
+      }).style('font-size', '12px').style('font-family', 'AvenirBook').style('font-weight', 'bold').style('text-anchor', 'middle').attr('opacity', 0).transition().delay(2000).duration(500).attr('opacity', 1);
       // Título
-      svg.append('text').attr('x', width / 2).attr('y', margin.top / 2).attr('text-anchor', 'middle').style('font-size', '16px').style('font-weight', 'bold').text('Evolución de la Balanza Comercial Chile (2012-2022)');
+      svg.append('text').attr('x', width / 2).attr('y', margin.top / 2).attr('text-anchor', 'middle').style('font-family', 'AvenirBook').style('font-size', '16px').style('font-weight', 'bold').text('Evolución de la Balanza Comercial Chile (2012-2022)');
 
       // Leyenda
       var legendData = [{
@@ -61894,12 +61894,12 @@ var BalanzaChart = function BalanzaChart() {
       legendItem.append('circle').attr('cx', 10).attr('cy', -470).attr('r', 5).style('fill', function (d) {
         return d.color;
       });
-      legendItem.append('text').attr('x', 20).attr('y', -470).attr('dy', '0.35em').text(function (d) {
+      legendItem.append('text').attr('x', 20).attr('y', -470).style('font-family', 'AvenirBook').attr('dy', '0.35em').text(function (d) {
         return d.label;
       }).style('font-size', '12px');
 
       // Footer
-      svg.append('text').attr('x', width / 2).attr('y', height + margin.top + margin.bottom - 40).attr('text-anchor', 'middle').style('font-size', '12px').style('font-weight', 'bold').style('cursor', 'pointer') // Agregar estilo de cursor de enlace
+      svg.append('text').attr('x', width / 2).attr('y', height + margin.top + margin.bottom - 40).attr('text-anchor', 'middle').style('font-size', '12px').style('font-weight', 'bold').style('font-family', 'AvenirBook').style('cursor', 'pointer') // Agregar estilo de cursor de enlace
       .text('Datos extraídos de Cochilco 2023').on('click', function () {
         window.open('https://www.cochilco.cl/Paginas/Inicio.aspx', '_blank'); // Abrir enlace en una nueva pestaña
       });
@@ -61950,10 +61950,10 @@ function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefine
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 var fadeInAnimation = (0, _styledComponents.keyframes)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n"])));
-var Container = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  height: 100vh;\n  width: 100%;\n  position: relative;\n  text-align: center;\n  justify-content: center;\n  animation: ", " 1.5s ease-in-out;\n\n  &.fade-in {\n    opacity: 1;\n  }\n"])), fadeInAnimation);
+var Container = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  height: 100vh;\n  width: 100%;\n  position: relative;\n  font-family: 'AvenirRoman';\n  text-align: center;\n  justify-content: center;\n  animation: ", " 1.5s ease-in-out;\n\n  &.fade-in {\n    opacity: 1;\n  }\n"])), fadeInAnimation);
 var Button = _styledComponents.default.a(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  /* Variables */\n  --button_radius: 0.75em;\n  --button_color: #e8e8e8;\n  --button_outline_color: #000000;\n  font-family: 'AvenirHeavy';\n  font-size: 17px;\n  font-weight: bold;\n  display: inline-block;\n  border: none;\n  border-radius: var(--button_radius);\n  background: var(--button_outline_color);\n  text-decoration: none;\n  color: var(--button_outline_color);\n  transition: transform 0.1s ease;\n\n  &:hover {\n    /* Pull the button upwards when hovered */\n    transform: translateY(-0.33em);\n  }\n\n  &:active {\n    /* Push the button downwards when pressed */\n    transform: translateY(0);\n  }\n\n  .button_top {\n    display: block;\n    box-sizing: border-box;\n    border: 2px solid var(--button_outline_color);\n    border-radius: var(--button_radius);\n    padding: 0.75em 1.5em;\n    background: var(--button_color);\n    color: var(--button_outline_color);\n    transform: translateY(-0.2em);\n  }\n"])));
 var Title = _styledComponents.default.h1(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  font-size: 70px;\n  font-family: 'AvenirHeavy';\n\n  @media ", " {\n    font-size: 50px;\n\n  }\n\n  @media ", " {\n    font-size: 60px;\n\n  }\n\n  @media ", " {\n    font-size: 70px;\n\n  }\n\n  @media ", " {\n    font-size: 70px;\n \n  }\n"])), _breakpoints.default.mobileM, _breakpoints.default.tablet, _breakpoints.default.laptop, _breakpoints.default.desktop);
-var Paragraph = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  font-size: 30px;\n  font-family: 'AvenirBook';\n  margin-bottom: 30px;\n\n  @media ", " {\n    font-size: 18px;\n\n  }\n\n  @media ", " {\n    font-size: 20px;\n\n  }\n\n  @media ", " {\n    font-size: 30px;\n\n  }\n\n  @media ", " {\n    font-size: 30px;\n\n  }\n"])), _breakpoints.default.mobileM, _breakpoints.default.tablet, _breakpoints.default.laptop, _breakpoints.default.desktop);
+var Paragraph = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  font-size: 30px;\n  font-family: 'AvenirBook';\n  margin-bottom: 30px;\n  font-family: 'AvenirBook';\n\n\n  @media ", " {\n    font-size: 18px;\n\n  }\n\n  @media ", " {\n    font-size: 20px;\n\n  }\n\n  @media ", " {\n    font-size: 30px;\n\n  }\n\n  @media ", " {\n    font-size: 30px;\n\n  }\n"])), _breakpoints.default.mobileM, _breakpoints.default.tablet, _breakpoints.default.laptop, _breakpoints.default.desktop);
 var MyButton = function MyButton() {
   var _React$useState = _react.default.useState(false),
     _React$useState2 = _slicedToArray(_React$useState, 2),
@@ -62336,7 +62336,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 var fadeInAnimation = (0, _styledComponents.keyframes)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n"])));
 var Container = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  height: 100vh;\n  width: 100%;\n  font-family: 'AvenirRoman';\n  position: absolute;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n  animation: ", " 1s ease-in-out;\n\n  &.fade-in {\n    opacity: 1;\n  }\n  \n  @media ", " {\n    padding: 10px;\n  }\n  \n  @media ", " {\n    padding: 20px;\n  }\n  \n  @media ", " {\n    padding: 0px;\n  }\n  \n  @media ", " {\n    padding: 0px;\n  }\n"])), fadeInAnimation, _breakpoints.default.mobileM, _breakpoints.default.tablet, _breakpoints.default.laptop, _breakpoints.default.desktop);
 var Title = _styledComponents.default.h1(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  font-size: 250px;\n  font-family: 'AvenirHeavy';\n  color: #D07131;\n  margin-bottom: 600px;\n\n  @media ", " {\n    font-size: 50px;\n    margin-bottom: 0;\n    margin-top: 0;\n  }\n\n  @media ", " {\n    font-size: 100px;\n    margin-bottom: 0px;\n    margin-top: 0;\n  }\n\n  @media ", " {\n    font-size: 150px;\n    margin-bottom: 0px;\n    margin-top: 0;\n  }\n\n  @media ", " {\n    font-size: 150px;\n    margin-bottom: 0px;\n    margin-top: 0;\n  }\n"])), _breakpoints.default.mobileM, _breakpoints.default.tablet, _breakpoints.default.laptop, _breakpoints.default.desktop);
-var Paragraph = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  font-size: 30px;\n  font-family: 'AvenirBook';\n  margin-left: 50px;\n  margin-right: 50px;\n  margin-bottom: 200px;\n  text-align: center;\n\n  @media ", " {\n    font-size: 18px;\n    margin-left: 10px;\n    margin-right: 10px;\n    margin-bottom: 100px;\n  }\n\n  @media ", " {\n    font-size: 20px;\n    margin-left: 20px;\n    margin-right: 20px;\n    margin-bottom: 100px;\n  }\n\n  @media ", " {\n    font-size: 30px;\n    margin-left: 50px;\n    margin-right: 50px;\n    margin-bottom: 200px;\n  }\n\n  @media ", " {\n    font-size: 40px;\n    margin-left: 80px;\n    margin-right: 80px;\n    margin-bottom: 300px;\n  }\n"])), _breakpoints.default.mobileM, _breakpoints.default.tablet, _breakpoints.default.laptop, _breakpoints.default.desktop);
+var Paragraph = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  font-size: 30px;\n  font-family: 'AvenirBook';\n  margin-left: 50px;\n  margin-right: 50px;\n  margin-bottom: 200px;\n  text-align: center;\n  font-family: 'AvenirBook';\n\n\n  @media ", " {\n    font-size: 18px;\n    margin-left: 10px;\n    margin-right: 10px;\n    margin-bottom: 100px;\n  }\n\n  @media ", " {\n    font-size: 20px;\n    margin-left: 20px;\n    margin-right: 20px;\n    margin-bottom: 100px;\n  }\n\n  @media ", " {\n    font-size: 30px;\n    margin-left: 50px;\n    margin-right: 50px;\n    margin-bottom: 200px;\n  }\n\n  @media ", " {\n    font-size: 40px;\n    margin-left: 80px;\n    margin-right: 80px;\n    margin-bottom: 300px;\n  }\n"])), _breakpoints.default.mobileM, _breakpoints.default.tablet, _breakpoints.default.laptop, _breakpoints.default.desktop);
 var Dmacro = function Dmacro() {
   var _React$useState = _react.default.useState(false),
     _React$useState2 = _slicedToArray(_React$useState, 2),
@@ -62570,7 +62570,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 var fadeInAnimation = (0, _styledComponents.keyframes)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n"])));
 var Container = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  height: 100vh;\n  width: 100%;\n  font-family: 'AvenirRoman';\n  position: absolute;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n  animation: ", " 1s ease-in-out;\n\n  &.fade-in {\n    opacity: 1;\n  }\n  \n  @media ", " {\n    padding: 10px;\n  }\n  \n  @media ", " {\n    padding: 20px;\n  }\n  \n  @media ", " {\n    padding: 0px;\n  }\n  \n  @media ", " {\n    padding: 0px;\n  }\n"])), fadeInAnimation, _breakpoints.default.mobileM, _breakpoints.default.tablet, _breakpoints.default.laptop, _breakpoints.default.desktop);
 var Title = _styledComponents.default.h1(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  font-size: 250px;\n  font-family: 'AvenirHeavy';\n  color: #D07131;\n  margin-bottom: 600px;\n\n  @media ", " {\n    font-size: 50px;\n    margin-bottom: 0;\n    margin-top: 0;\n  }\n\n  @media ", " {\n    font-size: 100px;\n    margin-bottom: 0px;\n    margin-top: 0;\n  }\n\n  @media ", " {\n    font-size: 150px;\n    margin-bottom: 0px;\n    margin-top: 0;\n  }\n\n  @media ", " {\n    font-size: 150px;\n    margin-bottom: 0px;\n    margin-top: 0;\n  }\n"])), _breakpoints.default.mobileM, _breakpoints.default.tablet, _breakpoints.default.laptop, _breakpoints.default.desktop);
-var Paragraph = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  font-size: 30px;\n  font-family: 'AvenirBook';\n  margin-left: 50px;\n  margin-right: 50px;\n  margin-bottom: 200px;\n  text-align: center;\n\n  @media ", " {\n    font-size: 18px;\n    margin-left: 10px;\n    margin-right: 10px;\n    margin-bottom: 100px;\n  }\n\n  @media ", " {\n    font-size: 20px;\n    margin-left: 20px;\n    margin-right: 20px;\n    margin-bottom: 100px;\n  }\n\n  @media ", " {\n    font-size: 30px;\n    margin-left: 50px;\n    margin-right: 50px;\n    margin-bottom: 200px;\n  }\n\n  @media ", " {\n    font-size: 40px;\n    margin-left: 80px;\n    margin-right: 80px;\n    margin-bottom: 300px;\n  }\n"])), _breakpoints.default.mobileM, _breakpoints.default.tablet, _breakpoints.default.laptop, _breakpoints.default.desktop);
+var Paragraph = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  font-size: 30px;\n  margin-left: 50px;\n  margin-right: 50px;\n  margin-bottom: 200px;\n  text-align: center;\n  font-family: 'AvenirBook';\n\n\n  @media ", " {\n    font-size: 18px;\n    margin-left: 10px;\n    margin-right: 10px;\n    margin-bottom: 100px;\n  }\n\n  @media ", " {\n    font-size: 20px;\n    margin-left: 20px;\n    margin-right: 20px;\n    margin-bottom: 100px;\n  }\n\n  @media ", " {\n    font-size: 30px;\n    margin-left: 50px;\n    margin-right: 50px;\n    margin-bottom: 200px;\n  }\n\n  @media ", " {\n    font-size: 40px;\n    margin-left: 80px;\n    margin-right: 80px;\n    margin-bottom: 300px;\n  }\n"])), _breakpoints.default.mobileM, _breakpoints.default.tablet, _breakpoints.default.laptop, _breakpoints.default.desktop);
 var FMercado = function FMercado() {
   var _React$useState = _react.default.useState(false),
     _React$useState2 = _slicedToArray(_React$useState, 2),
@@ -63008,7 +63008,78 @@ var News = function News() {
 };
 var _default = News;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","../../../Assets/Responsive/breakpoints":"Assets/Responsive/breakpoints.js"}],"Slides/WideScreen/WorkSlide/Work.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","../../../Assets/Responsive/breakpoints":"Assets/Responsive/breakpoints.js"}],"Slides/WideScreen/WorkSlide/Presentacion_Eciencia.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireDefault(require("react"));
+var _styledComponents = _interopRequireWildcard(require("styled-components"));
+var _breakpoints = _interopRequireDefault(require("../../../Assets/Responsive/breakpoints"));
+var _templateObject, _templateObject2, _templateObject3, _templateObject4;
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+var fadeInAnimation = (0, _styledComponents.keyframes)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n"])));
+var Container = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  height: 100vh;\n  width: 100%;\n  font-family: 'AvenirRoman';\n  position: absolute;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n  animation: ", " 1s ease-in-out;\n\n  &.fade-in {\n    opacity: 1;\n  }\n  \n  @media ", " {\n    padding: 10px;\n  }\n  \n  @media ", " {\n    padding: 20px;\n  }\n  \n  @media ", " {\n    padding: 0px;\n  }\n  \n  @media ", " {\n    padding: 0px;\n  }\n"])), fadeInAnimation, _breakpoints.default.mobileM, _breakpoints.default.tablet, _breakpoints.default.laptop, _breakpoints.default.desktop);
+var Title = _styledComponents.default.h1(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  font-size: 250px;\n  font-family: 'AvenirHeavy';\n  color: #D07131;\n  margin-bottom: 600px;\n\n  @media ", " {\n    font-size: 50px;\n    margin-bottom: 0;\n    margin-top: 0;\n  }\n\n  @media ", " {\n    font-size: 100px;\n    margin-bottom: 0px;\n    margin-top: 0;\n  }\n\n  @media ", " {\n    font-size: 150px;\n    margin-bottom: 0px;\n    margin-top: 0;\n  }\n\n  @media ", " {\n    font-size: 150px;\n    margin-bottom: 0px;\n    margin-top: 0;\n  }\n"])), _breakpoints.default.mobileM, _breakpoints.default.tablet, _breakpoints.default.laptop, _breakpoints.default.desktop);
+var Paragraph = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  font-size: 30px;\n  font-family: 'AvenirBook';\n  margin-left: 50px;\n  margin-right: 50px;\n  margin-bottom: 200px;\n  text-align: center;\n\n  @media ", " {\n    font-size: 18px;\n    margin-left: 10px;\n    margin-right: 10px;\n    margin-bottom: 100px;\n  }\n\n  @media ", " {\n    font-size: 20px;\n    margin-left: 20px;\n    margin-right: 20px;\n    margin-bottom: 100px;\n  }\n\n  @media ", " {\n    font-size: 30px;\n    margin-left: 50px;\n    margin-right: 50px;\n    margin-bottom: 200px;\n  }\n\n  @media ", " {\n    font-size: 40px;\n    margin-left: 80px;\n    margin-right: 80px;\n    margin-bottom: 300px;\n  }\n"])), _breakpoints.default.mobileM, _breakpoints.default.tablet, _breakpoints.default.laptop, _breakpoints.default.desktop);
+var Eciencia = function Eciencia() {
+  var _React$useState = _react.default.useState(false),
+    _React$useState2 = _slicedToArray(_React$useState, 2),
+    fadeIn = _React$useState2[0],
+    setFadeIn = _React$useState2[1];
+  _react.default.useEffect(function () {
+    setFadeIn(true);
+  }, []);
+  return /*#__PURE__*/_react.default.createElement(Container, {
+    className: fadeIn ? 'fade-in' : ''
+  }, /*#__PURE__*/_react.default.createElement(Title, null, "Econom\xEDa como ciencia social"), /*#__PURE__*/_react.default.createElement(Paragraph, null, "La Econom\xEDa como ciencia social estudia la producci\xF3n, distribuci\xF3n y consumo de bienes y servicios en una sociedad. En la econom\xEDa chilena, el flujo circular de la renta representa los intercambios entre familias, empresas, Estado y sector externo. Tres escenarios que podr\xEDan afectar este flujo son: disminuci\xF3n del consumo familiar, aumento en la contrataci\xF3n de trabajadores por parte de las empresas y aumento de impuestos estatales. Estos escenarios tendr\xEDan efectos en la econom\xEDa y en la industria minera, que desempe\xF1a un papel fundamental en la econom\xEDa chilena."));
+};
+var _default = Eciencia;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","../../../Assets/Responsive/breakpoints":"Assets/Responsive/breakpoints.js"}],"Assets/Images/flujo.svg":[function(require,module,exports) {
+module.exports = "/flujo.bf3bfa3f.svg";
+},{}],"Slides/WideScreen/WorkSlide/FlowCircularIncome.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireDefault(require("react"));
+var _styledComponents = _interopRequireWildcard(require("styled-components"));
+var _flujo = _interopRequireDefault(require("../../../Assets/Images/flujo.svg"));
+var _breakpoints = _interopRequireDefault(require("../../../Assets/Responsive/breakpoints"));
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5;
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+var fadeInAnimation = (0, _styledComponents.keyframes)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n"])));
+var Container = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  text-align: center;\n  margin-top: -100px;\n  animation: ", " 1s ease-in-out;\n\n  &.fade-in {\n    opacity: 1;\n  }\n\n  @media ", " {\n    padding: 10px;\n  }\n\n  @media ", " {\n    padding: 20px;\n  }\n\n  @media ", " {\n    padding: 0px;\n  }\n\n  @media ", " {\n    padding: 0px;\n  }\n"])), fadeInAnimation, _breakpoints.default.mobileM, _breakpoints.default.tablet, _breakpoints.default.laptop, _breakpoints.default.desktop);
+var Title = _styledComponents.default.h1(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  font-size: 100px;\n  margin-bottom: 20px;\n  margin-top: -80px;\n  color: #d07131;\n\n  @media ", " {\n    font-size: 40px;\n  }\n\n  @media ", " {\n    font-size: 40px;\n  }\n\n  @media ", " {\n    font-size: 100px;\n  }\n\n  @media ", " {\n    font-size: 100px;\n  }\n"])), _breakpoints.default.mobileS, _breakpoints.default.mobileM, _breakpoints.default.tablet, _breakpoints.default.laptopL);
+var Explanation = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  font-size: 30px;\n  text-align: left;\n  line-height: 1.5;\n\n  @media ", " {\n    font-size: 16px;\n  }\n\n  @media ", " {\n    font-size: 16px;\n  }\n\n  @media ", " {\n    font-size: 25px;\n  }\n\n  @media ", " {\n    font-size: 30px;\n  }\n"])), _breakpoints.default.mobileS, _breakpoints.default.mobileM, _breakpoints.default.tablet, _breakpoints.default.laptopL);
+var SVGObject = _styledComponents.default.object(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  width: 1200px;\n    \n  @media ", " {\n    width: 350px;\n  }\n  @media ", " {\n    width: 350px;\n  }\n  @media ", " {\n    width: 1000px;\n  }\n  @media ", " {\n    width: 1200px;\n  }\n\n\n"])), _breakpoints.default.mobileS, _breakpoints.default.mobileM, _breakpoints.default.tablet, _breakpoints.default.laptopL);
+var FlowCircularIncome = function FlowCircularIncome() {
+  var svgSource = _flujo.default;
+  return /*#__PURE__*/_react.default.createElement(Container, null, /*#__PURE__*/_react.default.createElement(Title, null, "Flujo Circular de la Renta"), /*#__PURE__*/_react.default.createElement(SVGObject, {
+    type: "image/svg+xml",
+    data: svgSource
+  }, "Tu navegador no admite SVG"), /*#__PURE__*/_react.default.createElement(Explanation, null, /*#__PURE__*/_react.default.createElement("p", null, "Explicaci\xF3n del diagrama:"), /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, "Las Familias reciben salarios y rentas de las Empresas."), /*#__PURE__*/_react.default.createElement("li", null, "Las Empresas pagan impuestos y regal\xEDas al Estado."), /*#__PURE__*/_react.default.createElement("li", null, "Las Empresas tambi\xE9n exportan productos al Sector Externo."), /*#__PURE__*/_react.default.createElement("li", null, "El Estado proporciona servicios y subsidios a las Familias."), /*#__PURE__*/_react.default.createElement("li", null, "El Sector Externo importa productos de las Empresas."), /*#__PURE__*/_react.default.createElement("li", null, "Las Familias pagan impuestos al Estado."), /*#__PURE__*/_react.default.createElement("li", null, "El Estado realiza inversiones y comercio con el Sector Externo."))));
+};
+var _default = FlowCircularIncome;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","../../../Assets/Images/flujo.svg":"Assets/Images/flujo.svg","../../../Assets/Responsive/breakpoints":"Assets/Responsive/breakpoints.js"}],"Slides/WideScreen/WorkSlide/Work.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -63034,6 +63105,8 @@ var _Presentation = _interopRequireDefault(require("../HeroSlide/Presentation"))
 var _Presentation2 = _interopRequireDefault(require("../HeroSlide/Presentation2"));
 var _DemandSupplyChart = _interopRequireDefault(require("./DemandSupplyChart"));
 var _News = _interopRequireDefault(require("./News"));
+var _Presentacion_Eciencia = _interopRequireDefault(require("./Presentacion_Eciencia"));
+var _FlowCircularIncome = _interopRequireDefault(require("./FlowCircularIncome"));
 var _templateObject;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
@@ -63052,7 +63125,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-var Container = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    display: flex;\n    /* border: 1px dashed red; */\n    height:3685vh;\n    \n"])));
+var Container = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    display: flex;\n    /* border: 1px dashed red; */\n    height:3885vh;\n    \n"])));
 var Work = /*#__PURE__*/function (_Component) {
   _inherits(Work, _Component);
   var _super = _createSuper(Work);
@@ -63297,6 +63370,22 @@ var Work = /*#__PURE__*/function (_Component) {
       projectType: '',
       roles: [''],
       projectGraph: '',
+      projectButton: /*#__PURE__*/_react.default.createElement(_Presentacion_Eciencia.default, null)
+    }, {
+      number: '',
+      projectName: '',
+      projectDesc: '',
+      projectType: '',
+      roles: [''],
+      projectGraph: /*#__PURE__*/_react.default.createElement(_FlowCircularIncome.default, null),
+      projectButton: ''
+    }, {
+      number: '',
+      projectName: '',
+      projectDesc: '',
+      projectType: '',
+      roles: [''],
+      projectGraph: '',
       projectButton: ''
     }];
     return _this;
@@ -63368,7 +63457,7 @@ var Work = /*#__PURE__*/function (_Component) {
 }(_react.Component);
 var _default = Work;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","./TextContent":"Slides/WideScreen/WorkSlide/TextContent.js","./CooperChart":"Slides/WideScreen/WorkSlide/CooperChart.js","./LineChartPIB":"Slides/WideScreen/WorkSlide/LineChartPIB.js","./LineChartWork":"Slides/WideScreen/WorkSlide/LineChartWork.js","./LineChartTPM":"Slides/WideScreen/WorkSlide/LineChartTPM.js","./LineChartIPC":"Slides/WideScreen/WorkSlide/LineChartIPC.js","./ChartBalanza":"Slides/WideScreen/WorkSlide/ChartBalanza.js","./MyButton":"Slides/WideScreen/WorkSlide/MyButton.js","./LithiumChart":"Slides/WideScreen/WorkSlide/LithiumChart.js","./SilverChart":"Slides/WideScreen/WorkSlide/SilverChart.js","./Presentation_Dmacro":"Slides/WideScreen/WorkSlide/Presentation_Dmacro.js","./DolarChart":"Slides/WideScreen/WorkSlide/DolarChart.js","./Presentation_FMercado":"Slides/WideScreen/WorkSlide/Presentation_FMercado.js","../HeroSlide/Presentation":"Slides/WideScreen/HeroSlide/Presentation.js","../HeroSlide/Presentation2":"Slides/WideScreen/HeroSlide/Presentation2.js","./DemandSupplyChart":"Slides/WideScreen/WorkSlide/DemandSupplyChart.js","./News":"Slides/WideScreen/WorkSlide/News.js"}],"Assets/Images/Social/twitter.svg":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","./TextContent":"Slides/WideScreen/WorkSlide/TextContent.js","./CooperChart":"Slides/WideScreen/WorkSlide/CooperChart.js","./LineChartPIB":"Slides/WideScreen/WorkSlide/LineChartPIB.js","./LineChartWork":"Slides/WideScreen/WorkSlide/LineChartWork.js","./LineChartTPM":"Slides/WideScreen/WorkSlide/LineChartTPM.js","./LineChartIPC":"Slides/WideScreen/WorkSlide/LineChartIPC.js","./ChartBalanza":"Slides/WideScreen/WorkSlide/ChartBalanza.js","./MyButton":"Slides/WideScreen/WorkSlide/MyButton.js","./LithiumChart":"Slides/WideScreen/WorkSlide/LithiumChart.js","./SilverChart":"Slides/WideScreen/WorkSlide/SilverChart.js","./Presentation_Dmacro":"Slides/WideScreen/WorkSlide/Presentation_Dmacro.js","./DolarChart":"Slides/WideScreen/WorkSlide/DolarChart.js","./Presentation_FMercado":"Slides/WideScreen/WorkSlide/Presentation_FMercado.js","../HeroSlide/Presentation":"Slides/WideScreen/HeroSlide/Presentation.js","../HeroSlide/Presentation2":"Slides/WideScreen/HeroSlide/Presentation2.js","./DemandSupplyChart":"Slides/WideScreen/WorkSlide/DemandSupplyChart.js","./News":"Slides/WideScreen/WorkSlide/News.js","./Presentacion_Eciencia":"Slides/WideScreen/WorkSlide/Presentacion_Eciencia.js","./FlowCircularIncome":"Slides/WideScreen/WorkSlide/FlowCircularIncome.js"}],"Assets/Images/Social/twitter.svg":[function(require,module,exports) {
 module.exports = "/twitter.920364fd.svg";
 },{}],"Assets/Images/Social/git.svg":[function(require,module,exports) {
 module.exports = "/git.1a000b88.svg";
@@ -63644,7 +63733,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59159" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50641" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
