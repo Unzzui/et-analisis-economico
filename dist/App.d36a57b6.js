@@ -62793,9 +62793,9 @@ var SupplyDemandChart = function SupplyDemandChart() {
       svg.append('g').call(d3.axisLeft(y));
 
       // Crear líneas horizontales
-      svg.append('g').selectAll('line').data(d3.range(2, d3.max(data, function (d) {
+      svg.append('g').selectAll('line').data(d3.range(5, d3.max(data, function (d) {
         return d.price;
-      }) + 2, 2)).enter().append('line').attr('class', 'horizontal-line').attr('x1', 0).attr('y1', function (d) {
+      }) + 5, 5)).enter().append('line').attr('class', 'horizontal-line').attr('x1', 0).attr('y1', function (d) {
         return y(d);
       }).attr('x2', width).attr('y2', function (d) {
         return y(d);
@@ -62907,7 +62907,7 @@ var SupplyDemandChart = function SupplyDemandChart() {
       svg.append('line').attr('x1', x(disminucionoferta.supply)).attr('y1', y.range()[0]).attr('x2', x(disminucionoferta.supply)).attr('y2', y.range()[1]).attr('stroke', '#ccc').attr('stroke-width', 1).attr('stroke-dasharray', '3,3');
       svg.append('text').attr('x', x(disminucionoferta.supply)).attr('y', y(disminucionoferta.price) + 45).attr('text-anchor', 'middle').text('Disminución Oferta').style('font-size', '12px').style('font-weight', 'bold').style('fill', '#333').attr('opacity', 0).transition().delay(2500).duration(500).attr('opacity', 1);
       // Título
-      svg.append('text').attr('x', width / 2).attr('y', margin.top / 2).attr('text-anchor', 'middle').style('font-size', '16px').style('font-weight', 'bold').text('Oferta y Demanda (Caso Hipotético)').attr('opacity', 0).transition().delay(2000).duration(500).attr('opacity', 1);
+      svg.append('text').attr('x', width / 2).attr('y', margin.top / 10).attr('text-anchor', 'middle').style('font-size', '16px').style('font-weight', 'bold').text('Oferta y Demanda (Caso Hipotético)').attr('opacity', 0).transition().delay(2000).duration(500).attr('opacity', 1);
 
       // Leyenda
       var legendData = [{
@@ -63741,7 +63741,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64883" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51865" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

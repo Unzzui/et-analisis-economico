@@ -86,7 +86,7 @@ const SupplyDemandChart = () => {
       svg
         .append('g')
         .selectAll('line')
-        .data(d3.range(2, d3.max(data, d => d.price) + 2, 2))
+        .data(d3.range(5, d3.max(data, d => d.price) + 5, 5))
         .enter()
         .append('line')
         .attr('class', 'horizontal-line')
@@ -476,7 +476,7 @@ const SupplyDemandChart = () => {
       svg
         .append('text')
         .attr('x', width / 2)
-        .attr('y', margin.top / 2)
+        .attr('y', margin.top / 10)
         .attr('text-anchor', 'middle')
         .style('font-size', '16px')
         .style('font-weight', 'bold')
