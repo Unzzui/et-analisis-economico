@@ -63325,7 +63325,7 @@ var Work = /*#__PURE__*/function (_Component) {
       projectButton: ''
     }, {
       number: '02',
-      projectName: 'Disminución de la oferta del bien transado en el mercado.',
+      projectName: 'Disminución de la oferta del bien transado en el mercado',
       projectDesc: 'Una disminución en la oferta del bien transado en el mercado puede ocurrir debido a problemas laborales, restricciones ambientales, baja calidad del mineral o dificultades técnicas en la extracción. Esto provoca un desplazamiento hacia la izquierda de la curva de oferta de cobre, lo que resulta en un aumento del precio y una reducción en la cantidad de cobre que Chile puede ofrecer en el mercado internacional.',
       projectType: '',
       roles: [''],
@@ -63333,7 +63333,7 @@ var Work = /*#__PURE__*/function (_Component) {
       projectButton: ''
     }, {
       number: '03',
-      projectName: 'Disminución de la demanda del bien transado en el mercado.',
+      projectName: 'Disminución de la demanda del bien transado en el mercado',
       projectDesc: 'Una disminución en la oferta del bien transado en el mercado puede ocurrir debido a problemas laborales, restricciones ambientales, baja calidad del mineral o dificultades técnicas en la extracción. Esto provoca un desplazamiento hacia la izquierda de la curva de oferta de cobre, lo que resulta en un aumento del precio y una reducción en la cantidad de cobre que Chile puede ofrecer en el mercado internacional.',
       projectType: '',
       roles: [''],
@@ -63341,7 +63341,7 @@ var Work = /*#__PURE__*/function (_Component) {
       projectButton: ''
     }, {
       number: '04',
-      projectName: 'Aumento de la oferta del bien transado en el mercado.',
+      projectName: 'Aumento de la oferta del bien transado en el mercado',
       projectDesc: 'Si se descubren nuevas minas de cobre en Chile o se logra aumentar la productividad de las minas existentes mediante mejoras tecnológicas, la oferta de cobre del país podría aumentar. Esto provocaría un desplazamiento hacia la derecha de la curva de oferta, lo que resultaría en una reducción del precio del cobre y un aumento en la cantidad de cobre que Chile puede vender en el mercado internacional. Esta situación podría beneficiar a la economía chilena al incrementar las exportaciones totales, aunque los ingresos por unidad de cobre podrían disminuir debido a la disminución de los precios.',
       projectType: '',
       roles: [''],
@@ -63741,7 +63741,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56515" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59148" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
