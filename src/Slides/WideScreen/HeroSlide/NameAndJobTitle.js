@@ -37,12 +37,12 @@ const Logo = styled.img`
     opacity: 1;
   }
   @media ${device.mobileS}{
-    width: 250px;
-    height: 70px;
+    width: 150px;
+    height: 37.5px;
   }
   @media ${device.mobileM}{
-    width: 250px;
-    height: 70px;
+    width: 150px;
+    height: 37.5px;
   }
 
   @media ${device.laptopL}{
@@ -52,10 +52,12 @@ const Logo = styled.img`
   @media ${device.laptop}{
     width: 400px;
     height: 100px;
+
   }
   @media ${device.desktop}{
     width: 400px;
     height: 100px;
+
   }
 `;
 

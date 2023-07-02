@@ -29578,7 +29578,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 var fadeInAnimation = (0, _styledComponents.keyframes)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n"])));
 var Container = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  display: flex;\n  flex-flow: column nowrap;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  width: 100%;\n  background-color: white;\n"])));
-var Logo = _styledComponents.default.img(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  width: 400px;\n  height: 100px;\n  margin-bottom: 20px;\n  animation: ", " 1.5s ease-in-out;\n\n  &.fade-in {\n    opacity: 1;\n  }\n  @media ", "{\n    width: 250px;\n    height: 70px;\n  }\n  @media ", "{\n    width: 250px;\n    height: 70px;\n  }\n\n  @media ", "{\n    width: 400px;\n    height: 100px;\n  }\n  @media ", "{\n    width: 400px;\n    height: 100px;\n  }\n  @media ", "{\n    width: 400px;\n    height: 100px;\n  }\n"])), fadeInAnimation, _breakpoints.default.mobileS, _breakpoints.default.mobileM, _breakpoints.default.laptopL, _breakpoints.default.laptop, _breakpoints.default.desktop);
+var Logo = _styledComponents.default.img(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  width: 400px;\n  height: 100px;\n  margin-bottom: 20px;\n  animation: ", " 1.5s ease-in-out;\n\n  &.fade-in {\n    opacity: 1;\n  }\n  @media ", "{\n    width: 150px;\n    height: 37.5px;\n  }\n  @media ", "{\n    width: 150px;\n    height: 37.5px;\n  }\n\n  @media ", "{\n    width: 400px;\n    height: 100px;\n  }\n  @media ", "{\n    width: 400px;\n    height: 100px;\n\n  }\n  @media ", "{\n    width: 400px;\n    height: 100px;\n\n  }\n"])), fadeInAnimation, _breakpoints.default.mobileS, _breakpoints.default.mobileM, _breakpoints.default.laptopL, _breakpoints.default.laptop, _breakpoints.default.desktop);
 var NameAndJobTitle = /*#__PURE__*/function (_Component) {
   _inherits(NameAndJobTitle, _Component);
   var _super = _createSuper(NameAndJobTitle);
@@ -63733,7 +63733,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50641" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52223" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
