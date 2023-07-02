@@ -68,7 +68,7 @@ const BalanzaChart = () => {
       .attr('width', width + margin.left + margin.right)
       .attr('height', height + margin.top + margin.bottom)
       .append('g')
-      .style('font-family', 'AvenirRoman')
+      .style('font-family','AvenirBook')
       .attr('transform', `translate(${margin.left},${margin.top})`);
 
     // Crear el eje x
@@ -84,6 +84,7 @@ const BalanzaChart = () => {
       .attr('y', height + margin.bottom - 75)
       .attr('text-anchor', 'middle')
       .text('Año')
+      .style('font-family','AvenirBook')
       .style('font-size', '14px')
       .style('font-weight', 'bold');
 
@@ -103,6 +104,7 @@ const BalanzaChart = () => {
       .attr('x', -height / 2)
       .attr('y', -margin.left + 40)
       .attr('text-anchor', 'middle')
+      .style('font-family','AvenirBook')
       .text('Valor')
       .style('font-size', '14px')
       .style('font-weight', 'bold');
@@ -114,6 +116,7 @@ const BalanzaChart = () => {
       .attr('x', -height / 2)
       .attr('y', width + margin.right + 40)
       .attr('text-anchor', 'middle')
+      .style('font-family','AvenirBook')
       .text('Valor Exportaciones/Importaciones')
       .style('font-size', '14px')
       .style('font-weight', 'bold');
@@ -129,6 +132,7 @@ const BalanzaChart = () => {
       .attr('y', height)
       .attr('width', x.bandwidth())
       .attr('height', 0)
+      .style('font-family','AvenirBook')
       .attr('fill', '#CB6D51')  
       .transition()
       .duration(2000)
@@ -185,6 +189,7 @@ const BalanzaChart = () => {
       .attr('x', d => x(d.Periodo) + x.bandwidth() / 2)
       .attr('y', height)
       .text(d => formatNumber(d.Bienes))
+      .style('font-family','AvenirBook')
       .style('font-size', '12px')
       .style('font-weight', 'bold')
       .style('text-anchor', 'middle')
@@ -202,6 +207,7 @@ svg
   .attr('x', d => x(d.Periodo) + x.bandwidth() / 2)
   .attr('y', d => yLines(d.Exportaciones) - 10)
   .text(d => formatNumber(d.Exportaciones))
+  .style('font-family','AvenirBook')
   .style('font-size', '12px')
   .style('font-weight', 'bold')
   .style('text-anchor', 'middle')
@@ -222,6 +228,7 @@ svg
   .attr('y', d => yLines(d.Importaciones) + 30)
   .text(d => formatNumber(d.Importaciones))
   .style('font-size', '12px')
+  .style('font-family','AvenirBook')
   .style('font-weight', 'bold')
   .style('text-anchor', 'middle')
   .attr('opacity', 0)
@@ -235,6 +242,7 @@ svg
       .attr('x', width / 2)
       .attr('y', margin.top / 2)
       .attr('text-anchor', 'middle')
+      .style('font-family','AvenirBook')
       .style('font-size', '16px')
       .style('font-weight', 'bold')
       .text('Evolución de la Balanza Comercial Chile (2012-2022)');
@@ -270,6 +278,7 @@ svg
       .append('text')
       .attr('x', 20)
       .attr('y', -470)
+      .style('font-family','AvenirBook')
       .attr('dy', '0.35em')
       .text(d => d.label)
       .style('font-size', '12px');
@@ -282,6 +291,7 @@ svg
       .attr('text-anchor', 'middle')
       .style('font-size', '12px')
       .style('font-weight', 'bold')
+      .style('font-family','AvenirBook')
       .style('cursor', 'pointer') // Agregar estilo de cursor de enlace
       .text('Datos extraídos de Cochilco 2023')
       .on('click', () => {

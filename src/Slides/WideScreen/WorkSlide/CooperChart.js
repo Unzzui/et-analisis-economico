@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 
+
 const CopperProductionChart = () => {
   const chartRef = useRef(null);
 
@@ -51,6 +52,7 @@ const CopperProductionChart = () => {
         .attr('text-anchor', 'middle')
         .text('País')
         .style('font-size', '14px')
+        .style('font-family','AvenirBook')
         .style('font-weight', 'bold');
 
       svg
@@ -64,6 +66,7 @@ const CopperProductionChart = () => {
         .attr('y', -margin.left + 40)
         .attr('text-anchor', 'middle')
         .text('Producción (toneladas métricas)')
+        .style('font-family','AvenirBook')
         .style('font-size', '14px')
         .style('font-weight', 'bold');
 
@@ -74,6 +77,7 @@ const CopperProductionChart = () => {
         .enter()
         .append('line')
         .attr('class', 'horizontal-line')
+        .style('font-family','AvenirBook')
         .attr('x1', 0)
         .attr('y1', (d) => yBars(d))
         .attr('x2', width)
@@ -93,6 +97,7 @@ const CopperProductionChart = () => {
         .attr('y', height)
         .attr('width', x.bandwidth())
         .attr('height', 0)
+        .style('font-family','AvenirBook')
         .attr('fill', (d) => (d.pais === 'Chile' ? '#CB6D51' : 'silver'))
         .transition()
         .duration(2000)
@@ -110,6 +115,7 @@ const CopperProductionChart = () => {
         .attr('y', height)
         .text((d) => formatNumber(d.produccion))
         .style('font-size', '12px')
+        .style('font-family','AvenirBook')
         .style('text-anchor', 'middle')
         .transition()
         .duration(2000)
@@ -121,6 +127,7 @@ const CopperProductionChart = () => {
         .attr('y', margin.top / 2)
         .attr('text-anchor', 'middle')
         .style('font-size', '16px')
+        .style('font-family','AvenirBook')
         .style('font-weight', 'bold')
         .text('Producción de Cobre por País (2022)');
 
@@ -139,6 +146,7 @@ const CopperProductionChart = () => {
       const legendItem = legendItems
         .enter()
         .append('g')
+        .style('font-family','AvenirBook')
         .attr('class', 'legend-item')
         .attr('transform', (d, i) => `translate(0, ${i * 20})`);
 
@@ -162,6 +170,7 @@ const CopperProductionChart = () => {
         .attr('dy', '0.35em')
         .attr('opacity', 0)
         .text((d) => d.label)
+        .style('font-family','AvenirBook')
         .style('font-size', '12px')
         .transition()
         .delay(2000)
@@ -175,6 +184,7 @@ const CopperProductionChart = () => {
         .attr('y', height + margin.top + margin.bottom - 50)
         .attr('text-anchor', 'middle')
         .style('font-size', '12px')
+        .style('font-family','AvenirBook')
         .style('font-weight', 'bold')
         .text('Datos extraídos de Cochilco 2023')
         .on('click', () => {

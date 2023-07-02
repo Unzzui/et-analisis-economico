@@ -17,11 +17,13 @@ import Presentation from '../HeroSlide/Presentation';
 import Presentation2 from '../HeroSlide/Presentation2';
 import SupplyDemandChart from  './DemandSupplyChart'
 import News from './News';
+import Eciencia from './Presentacion_Eciencia';
+import FlowCircularIncome from './FlowCircularIncome';
 
 const Container = styled.div`
     display: flex;
     /* border: 1px dashed red; */
-    height:3685vh;
+    height:3885vh;
     
 `;
 
@@ -331,9 +333,30 @@ class Work extends Component {
         projectType: '',
         roles: [''],
         projectGraph: '',
+        projectButton:  <Eciencia/>,
+
+      },
+      {
+        number: '',
+        projectName: '',
+        projectDesc: '',
+        projectType: '',
+        roles: [''],
+        projectGraph: <FlowCircularIncome />,
         projectButton:  '',
 
       },
+         {
+        number: '',
+        projectName: '',
+        projectDesc: '',
+        projectType: '',
+        roles: [''],
+        projectGraph: '',
+        projectButton:'',
+
+      },
+ 
      
       
     ];
@@ -387,7 +410,6 @@ class Work extends Component {
       roles={this.workDetails[slideNumber].roles}
       projectGraph={this.workDetails[slideNumber].projectGraph}
       projectButton={this.workDetails[slideNumber].projectButton}
-      
       refreshToggle={refresh}
       />
     );

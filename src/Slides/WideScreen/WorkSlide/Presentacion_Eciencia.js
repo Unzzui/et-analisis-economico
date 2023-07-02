@@ -78,12 +78,11 @@ const Title = styled.h1`
 
 const Paragraph = styled.div`
   font-size: 30px;
+  font-family: 'AvenirBook';
   margin-left: 50px;
   margin-right: 50px;
   margin-bottom: 200px;
   text-align: center;
-  font-family: 'AvenirBook';
-
 
   @media ${device.mobileM} {
     font-size: 18px;
@@ -114,7 +113,7 @@ const Paragraph = styled.div`
   }
 `;
 
-const FMercado = () => {
+const Eciencia = () => {
   const [fadeIn, setFadeIn] = React.useState(false);
 
   React.useEffect(() => {
@@ -123,9 +122,9 @@ const FMercado = () => {
 
   return (
     <Container className={fadeIn ? 'fade-in' : ''}>
-      <Title>Funcionamiento del mercado</Title>
+      <Title>Economía como ciencia social</Title>
       <Paragraph>
-      En esta sección, exploraremos el funcionamiento del mercado de la industria minera y examinaremos los cambios en la oferta y la demanda. Acompañaremos nuestra investigación con un gráfico hipotético que ilustrara escenarios de aumento de la demanda, disminución de la oferta, disminución de la demanda y aumento de la oferta. Además, proporcionaremos enlaces a noticias reales que ejemplifican estos casos y muestran cómo situaciones reales han afectado al mercado minero. Estos ejemplos concretos brindarán una visión más completa de los impactos y las implicaciones de los cambios en la oferta y la demanda en este sector estratégico.
+      La Economía como ciencia social estudia la producción, distribución y consumo de bienes y servicios en una sociedad. En la economía chilena, el flujo circular de la renta representa los intercambios entre familias, empresas, Estado y sector externo. Tres escenarios que podrían afectar este flujo son: disminución del consumo familiar, aumento en la contratación de trabajadores por parte de las empresas y aumento de impuestos estatales. Estos escenarios tendrían efectos en la economía y en la industria minera, que desempeña un papel fundamental en la economía chilena.
       
         </Paragraph>
 
@@ -133,4 +132,4 @@ const FMercado = () => {
   );
 };
 
-export default FMercado;
+export default Eciencia;

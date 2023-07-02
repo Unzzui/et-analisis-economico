@@ -83,6 +83,8 @@ const Paragraph = styled.div`
   margin-right: 50px;
   margin-bottom: 200px;
   text-align: center;
+  font-family: 'AvenirBook';
+
 
   @media ${device.mobileM} {
     font-size: 18px;

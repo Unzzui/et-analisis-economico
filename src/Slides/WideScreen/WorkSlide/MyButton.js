@@ -15,6 +15,7 @@ const Container = styled.div`
   height: 100vh;
   width: 100%;
   position: relative;
+  font-family: 'AvenirRoman';
   text-align: center;
   justify-content: center;
   animation: ${fadeInAnimation} 1.5s ease-in-out;
@@ -91,6 +92,8 @@ const Paragraph = styled.div`
   font-size: 30px;
   font-family: 'AvenirBook';
   margin-bottom: 30px;
+  font-family: 'AvenirBook';
+
 
   @media ${device.mobileM} {
     font-size: 18px;
