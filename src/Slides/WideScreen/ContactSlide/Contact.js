@@ -1,19 +1,15 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import twitterImg from '../../../Assets/Images/Social/twitter.svg';
 import githubImg from '../../../Assets/Images/Social/git.svg';
 import mailImg from '../../../Assets/Images/Social/mail.svg';
-import instaImg from '../../../Assets/Images/Social/insta.svg';
-import dribbbleImg from '../../../Assets/Images/Social/dribbble.svg';
 import linkedInImg from '../../../Assets/Images/Social/linkedin.svg';
 import SocialLogo from './SocialLogo';
 import device from '../../../Assets/Responsive/breakpoints';
 
 const Container = styled.section`
-    height:100vh;/* Since pageSplitTime is 1.4 */
-    width:100%;
-    text-align:center;
-    /* border: 1px solid blue; */
+    height: 100vh;
+    width: 100%;
+    text-align: center;
     position: relative;
     overflow: hidden;
 `;
@@ -23,8 +19,8 @@ const ContactTitle = styled.div`
   font-family: 'AvenirHeavy';
   font-size: 200px;
   color: #D07131;
-  top:12%;
-  left:-70%;
+  top: 12%;
+  left: -70%;
   @media ${device.mobileS} {
     font-size: 50px;
   }
@@ -46,13 +42,51 @@ const ContactTitle = styled.div`
 `;
 
 const SocialMediaIcons = styled.div`
-  /* border: 1px solid black; */
   margin-left: 20%;
   margin-right: 20%;
   z-index: 1;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+`;
+
+const Footer = styled.footer`
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+background-color: #f0f0f0;
+padding: 10px;
+font-size: 14px;
+text-align: center;
+font-family: 'AvenirBook';
+color: #666;
+@media ${device.mobileS} {
+  margin-left: 0;
+  margin-right: 0;
+
+}
+@media ${device.mobileM} {
+  margin-left: 0;
+  margin-right: 0;
+
+}
+@media ${device.tablet} {
+  margin-left: 0;
+  margin-right: 0;
+}
+@media ${device.laptop} {
+  margin-left: 0;
+  margin-right: 0;
+}
+@media ${device.laptopL} {
+  margin-left: 0;
+  margin-right: 0;
+}
+@media ${device.desktop} {
+  margin-left: 0;
+  margin-right: 0;
+}
 `;
 
 class Contact extends Component {
@@ -97,6 +131,9 @@ class Contact extends Component {
           <SocialLogo imgURL={mailImg} alternate="Mail" redirectURL="mailto:d.bravob@duocuc.cl,lean.navarrete@duocuc.cl,ru.godoy@duocuc.cl?subject=Consulta%20Examen%20Transversal%20Análisis%20Económico" />
           <SocialLogo imgURL={linkedInImg} alternate="Linkedin" redirectURL="https://www.linkedin.com/in/d-bravob/"  />
         </SocialMediaIcons>
+        <Footer>
+          &copy; {new Date().getFullYear()} Desarrollado por Diego Bravo - Todos los derechos reservados
+        </Footer>
       </Container>
     );
   }

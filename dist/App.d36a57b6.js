@@ -63465,16 +63465,10 @@ var Work = /*#__PURE__*/function (_Component) {
 }(_react.Component);
 var _default = Work;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","./TextContent":"Slides/WideScreen/WorkSlide/TextContent.js","./CooperChart":"Slides/WideScreen/WorkSlide/CooperChart.js","./LineChartPIB":"Slides/WideScreen/WorkSlide/LineChartPIB.js","./LineChartWork":"Slides/WideScreen/WorkSlide/LineChartWork.js","./LineChartTPM":"Slides/WideScreen/WorkSlide/LineChartTPM.js","./LineChartIPC":"Slides/WideScreen/WorkSlide/LineChartIPC.js","./ChartBalanza":"Slides/WideScreen/WorkSlide/ChartBalanza.js","./MyButton":"Slides/WideScreen/WorkSlide/MyButton.js","./LithiumChart":"Slides/WideScreen/WorkSlide/LithiumChart.js","./SilverChart":"Slides/WideScreen/WorkSlide/SilverChart.js","./Presentation_Dmacro":"Slides/WideScreen/WorkSlide/Presentation_Dmacro.js","./DolarChart":"Slides/WideScreen/WorkSlide/DolarChart.js","./Presentation_FMercado":"Slides/WideScreen/WorkSlide/Presentation_FMercado.js","../HeroSlide/Presentation":"Slides/WideScreen/HeroSlide/Presentation.js","../HeroSlide/Presentation2":"Slides/WideScreen/HeroSlide/Presentation2.js","./DemandSupplyChart":"Slides/WideScreen/WorkSlide/DemandSupplyChart.js","./News":"Slides/WideScreen/WorkSlide/News.js","./Presentacion_Eciencia":"Slides/WideScreen/WorkSlide/Presentacion_Eciencia.js","./FlowCircularIncome":"Slides/WideScreen/WorkSlide/FlowCircularIncome.js"}],"Assets/Images/Social/twitter.svg":[function(require,module,exports) {
-module.exports = "/twitter.920364fd.svg";
-},{}],"Assets/Images/Social/git.svg":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","./TextContent":"Slides/WideScreen/WorkSlide/TextContent.js","./CooperChart":"Slides/WideScreen/WorkSlide/CooperChart.js","./LineChartPIB":"Slides/WideScreen/WorkSlide/LineChartPIB.js","./LineChartWork":"Slides/WideScreen/WorkSlide/LineChartWork.js","./LineChartTPM":"Slides/WideScreen/WorkSlide/LineChartTPM.js","./LineChartIPC":"Slides/WideScreen/WorkSlide/LineChartIPC.js","./ChartBalanza":"Slides/WideScreen/WorkSlide/ChartBalanza.js","./MyButton":"Slides/WideScreen/WorkSlide/MyButton.js","./LithiumChart":"Slides/WideScreen/WorkSlide/LithiumChart.js","./SilverChart":"Slides/WideScreen/WorkSlide/SilverChart.js","./Presentation_Dmacro":"Slides/WideScreen/WorkSlide/Presentation_Dmacro.js","./DolarChart":"Slides/WideScreen/WorkSlide/DolarChart.js","./Presentation_FMercado":"Slides/WideScreen/WorkSlide/Presentation_FMercado.js","../HeroSlide/Presentation":"Slides/WideScreen/HeroSlide/Presentation.js","../HeroSlide/Presentation2":"Slides/WideScreen/HeroSlide/Presentation2.js","./DemandSupplyChart":"Slides/WideScreen/WorkSlide/DemandSupplyChart.js","./News":"Slides/WideScreen/WorkSlide/News.js","./Presentacion_Eciencia":"Slides/WideScreen/WorkSlide/Presentacion_Eciencia.js","./FlowCircularIncome":"Slides/WideScreen/WorkSlide/FlowCircularIncome.js"}],"Assets/Images/Social/git.svg":[function(require,module,exports) {
 module.exports = "/git.1a000b88.svg";
 },{}],"Assets/Images/Social/mail.svg":[function(require,module,exports) {
 module.exports = "/mail.00c836f6.svg";
-},{}],"Assets/Images/Social/insta.svg":[function(require,module,exports) {
-module.exports = "/insta.54ac694c.svg";
-},{}],"Assets/Images/Social/dribbble.svg":[function(require,module,exports) {
-module.exports = "/dribbble.72bc2d7b.svg";
 },{}],"Assets/Images/Social/linkedin.svg":[function(require,module,exports) {
 module.exports = "/linkedin.a58775df.svg";
 },{}],"Slides/WideScreen/ContactSlide/SocialLogo.js":[function(require,module,exports) {
@@ -63564,15 +63558,12 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _react = _interopRequireWildcard(require("react"));
 var _styledComponents = _interopRequireDefault(require("styled-components"));
-var _twitter = _interopRequireDefault(require("../../../Assets/Images/Social/twitter.svg"));
 var _git = _interopRequireDefault(require("../../../Assets/Images/Social/git.svg"));
 var _mail = _interopRequireDefault(require("../../../Assets/Images/Social/mail.svg"));
-var _insta = _interopRequireDefault(require("../../../Assets/Images/Social/insta.svg"));
-var _dribbble = _interopRequireDefault(require("../../../Assets/Images/Social/dribbble.svg"));
 var _linkedin = _interopRequireDefault(require("../../../Assets/Images/Social/linkedin.svg"));
 var _SocialLogo = _interopRequireDefault(require("./SocialLogo"));
 var _breakpoints = _interopRequireDefault(require("../../../Assets/Responsive/breakpoints"));
-var _templateObject, _templateObject2, _templateObject3;
+var _templateObject, _templateObject2, _templateObject3, _templateObject4;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -63590,9 +63581,10 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-var Container = _styledComponents.default.section(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    height:100vh;/* Since pageSplitTime is 1.4 */\n    width:100%;\n    text-align:center;\n    /* border: 1px solid blue; */\n    position: relative;\n    overflow: hidden;\n"])));
-var ContactTitle = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  transition: transform 0.5s ease-out;\n  font-family: 'AvenirHeavy';\n  font-size: 200px;\n  color: #D07131;\n  top:12%;\n  left:-70%;\n  @media ", " {\n    font-size: 50px;\n  }\n  @media ", " {\n    font-size: 70px;\n  }\n  @media ", " {\n    font-size: 90px;\n  }\n  @media ", " {\n    font-size: 140px;\n  }\n  @media ", " {\n    font-size: 200px;\n  }\n  @media ", " {\n    font-size: 350px;\n  }\n"])), _breakpoints.default.mobileS, _breakpoints.default.mobileM, _breakpoints.default.tablet, _breakpoints.default.laptop, _breakpoints.default.laptopL, _breakpoints.default.desktop);
-var SocialMediaIcons = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  /* border: 1px solid black; */\n  margin-left: 20%;\n  margin-right: 20%;\n  z-index: 1;\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: space-around;\n"])));
+var Container = _styledComponents.default.section(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    height: 100vh;\n    width: 100%;\n    text-align: center;\n    position: relative;\n    overflow: hidden;\n"])));
+var ContactTitle = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  transition: transform 0.5s ease-out;\n  font-family: 'AvenirHeavy';\n  font-size: 200px;\n  color: #D07131;\n  top: 12%;\n  left: -70%;\n  @media ", " {\n    font-size: 50px;\n  }\n  @media ", " {\n    font-size: 70px;\n  }\n  @media ", " {\n    font-size: 90px;\n  }\n  @media ", " {\n    font-size: 140px;\n  }\n  @media ", " {\n    font-size: 200px;\n  }\n  @media ", " {\n    font-size: 350px;\n  }\n"])), _breakpoints.default.mobileS, _breakpoints.default.mobileM, _breakpoints.default.tablet, _breakpoints.default.laptop, _breakpoints.default.laptopL, _breakpoints.default.desktop);
+var SocialMediaIcons = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  margin-left: 20%;\n  margin-right: 20%;\n  z-index: 1;\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: space-around;\n"])));
+var Footer = _styledComponents.default.footer(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\nposition: absolute;\nbottom: 0;\nleft: 0;\nwidth: 100%;\nbackground-color: #f0f0f0;\npadding: 10px;\nfont-size: 14px;\ntext-align: center;\nfont-family: 'AvenirBook';\ncolor: #666;\n@media ", " {\n  margin-left: 0;\n  margin-right: 0;\n\n}\n@media ", " {\n  margin-left: 0;\n  margin-right: 0;\n\n}\n@media ", " {\n  margin-left: 0;\n  margin-right: 0;\n}\n@media ", " {\n  margin-left: 0;\n  margin-right: 0;\n}\n@media ", " {\n  margin-left: 0;\n  margin-right: 0;\n}\n@media ", " {\n  margin-left: 0;\n  margin-right: 0;\n}\n"])), _breakpoints.default.mobileS, _breakpoints.default.mobileM, _breakpoints.default.tablet, _breakpoints.default.laptop, _breakpoints.default.laptopL, _breakpoints.default.desktop);
 var Contact = /*#__PURE__*/function (_Component) {
   _inherits(Contact, _Component);
   var _super = _createSuper(Contact);
@@ -63658,14 +63650,14 @@ var Contact = /*#__PURE__*/function (_Component) {
         imgURL: _linkedin.default,
         alternate: "Linkedin",
         redirectURL: "https://www.linkedin.com/in/d-bravob/"
-      })));
+      })), /*#__PURE__*/_react.default.createElement(Footer, null, "\xA9 ", new Date().getFullYear(), " Desarrollado por Diego Bravo - Todos los derechos reservados"));
     }
   }]);
   return Contact;
 }(_react.Component);
 var _default = Contact;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","../../../Assets/Images/Social/twitter.svg":"Assets/Images/Social/twitter.svg","../../../Assets/Images/Social/git.svg":"Assets/Images/Social/git.svg","../../../Assets/Images/Social/mail.svg":"Assets/Images/Social/mail.svg","../../../Assets/Images/Social/insta.svg":"Assets/Images/Social/insta.svg","../../../Assets/Images/Social/dribbble.svg":"Assets/Images/Social/dribbble.svg","../../../Assets/Images/Social/linkedin.svg":"Assets/Images/Social/linkedin.svg","./SocialLogo":"Slides/WideScreen/ContactSlide/SocialLogo.js","../../../Assets/Responsive/breakpoints":"Assets/Responsive/breakpoints.js"}],"App.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","../../../Assets/Images/Social/git.svg":"Assets/Images/Social/git.svg","../../../Assets/Images/Social/mail.svg":"Assets/Images/Social/mail.svg","../../../Assets/Images/Social/linkedin.svg":"Assets/Images/Social/linkedin.svg","./SocialLogo":"Slides/WideScreen/ContactSlide/SocialLogo.js","../../../Assets/Responsive/breakpoints":"Assets/Responsive/breakpoints.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireWildcard(require("react"));
@@ -63741,7 +63733,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51865" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57612" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
