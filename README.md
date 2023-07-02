@@ -1,6 +1,6 @@
-# Diego Bravo ET Analisis Economico website
+# Diego Bravo ET Analísis Económico website
 
-Website link: [https://et-analisis-economico-72b708efbc49.herokuapp.com/](ET-Analisis-Economico)
+Website link: [ET Analísis Económico](https://et-analisis-economico-72b708efbc49.herokuapp.com/)
 
 
 
