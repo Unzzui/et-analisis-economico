@@ -61926,8 +61926,8 @@ var BalanzaChart = function BalanzaChart() {
 };
 var _default = BalanzaChart;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","d3":"../node_modules/d3/src/index.js"}],"Assets/Data/Analisis_Economico_ET_Final.docx.pdf":[function(require,module,exports) {
-module.exports = "/Analisis_Economico_ET_Final.docx.855e53ca.pdf";
+},{"react":"../node_modules/react/index.js","d3":"../node_modules/d3/src/index.js"}],"Assets/Data/Analisis_Economico_ET_Final.pdf":[function(require,module,exports) {
+module.exports = "/Analisis_Economico_ET_Final.3fa2b293.pdf";
 },{}],"Slides/WideScreen/WorkSlide/MyButton.js":[function(require,module,exports) {
 "use strict";
 
@@ -61965,7 +61965,7 @@ var MyButton = function MyButton() {
   return /*#__PURE__*/_react.default.createElement(Container, {
     className: fadeIn ? 'fade-in' : ''
   }, /*#__PURE__*/_react.default.createElement(Title, null, "Descargar Informe en PDF"), /*#__PURE__*/_react.default.createElement(Paragraph, null, "Haz clic en el bot\xF3n \"Descargar\" para obtener el informe completo en formato PDF. ", /*#__PURE__*/_react.default.createElement("br", null), "Para continuar explorando la p\xE1gina, simplemente desliza hacia abajo o realiza scroll."), /*#__PURE__*/_react.default.createElement(Button, {
-    href: require('../../../Assets/Data/Analisis_Economico_ET_Final.docx.pdf'),
+    href: require('../../../Assets/Data/Analisis_Economico_ET_Final.pdf'),
     download: true
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "button_top"
@@ -61973,7 +61973,7 @@ var MyButton = function MyButton() {
 };
 var _default = MyButton;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","../../../Assets/Responsive/breakpoints":"Assets/Responsive/breakpoints.js","../../../Assets/Data/Analisis_Economico_ET_Final.docx.pdf":"Assets/Data/Analisis_Economico_ET_Final.docx.pdf"}],"Slides/WideScreen/WorkSlide/LithiumChart.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","../../../Assets/Responsive/breakpoints":"Assets/Responsive/breakpoints.js","../../../Assets/Data/Analisis_Economico_ET_Final.pdf":"Assets/Data/Analisis_Economico_ET_Final.pdf"}],"Slides/WideScreen/WorkSlide/LithiumChart.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -63741,7 +63741,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59148" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63972" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

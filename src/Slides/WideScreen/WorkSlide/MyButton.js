@@ -131,7 +131,7 @@ const MyButton = () => {
         Para continuar explorando la página, simplemente desliza hacia abajo o realiza scroll.
       </Paragraph>
       <Button
-        href={require('../../../Assets/Data/Analisis_Economico_ET_Final.docx.pdf')}
+        href={require('../../../Assets/Data/Analisis_Economico_ET_Final.pdf')}
         download
       >
         <div className="button_top">Descargar</div>
